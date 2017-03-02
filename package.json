@@ -1,0 +1,24 @@
+{
+  "name": "scss-theme-split",
+  "version": "1.0.0",
+  "description": "gulp插件，拆分主题scss文件",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "deemstone@gmail.com",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-postcss": "^6.3.0",
+    "gulp-sourcemaps": "^2.4.1",
+    "gulp-watch": "^4.3.11",
+    "postcss-advanced-variables": "^1.2.2",
+    "postcss-scss": "^0.4.1",
+    "q": "^1.4.1"
+  },
+  "dependencies": {
+    "debug": "^2.6.1",
+    "postcss": "^5.2.15"
+  }
+}

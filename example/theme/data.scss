@@ -1,0 +1,1772 @@
+//共用样式
+$fontText: rgba(10,18,32,0.64);
+$fontTextTip: rgba(10,18,32,0.38);
+$fontTextTip2: $fontTextTip;
+$fontTextTip3: rgba(10, 18, 32, 0.46);
+$fontTextTipMemberFaded: rgba(0, 0, 0, .24);
+$fontTextHover: rgba(10,18,32,0.87);
+$fontTextActive: rgba(81,130,228,1);
+$fontTextActive2: rgba(10,18,32,0.87);
+$fontTextDisabled: rgba(0,0,0,0.24);
+$fontTextErr: #E45151;
+$fontNaNTips: rgba(10,18,32,0.38);
+$fontTextLink: #5182e4;
+$fontDefaultTextComponent: #636870;
+
+$bgColorWrap: #fff;
+$bgColorDeep: rgba(0,0,0,0.06);
+
+$shadowTab: 0 -1px 0 0 rgba(81,130,228,.15) inset;
+$shadowBox: 0px 0px 4px 0px rgba(0,0,0,0.10), 0px 1px 5px 0px rgba(0,0,0,0.10);
+$shadowBoxDeep: 0px 0px 2px 0px rgba(0,0,0,0.30), 0px 6px 4px 0px rgba(0,0,0,0.10);
+$borderBottomColorTabActive: #5182E4;
+
+//end
+
+$themeBg: #F0F2F3;
+$bgBdp: #5182E4;
+$bgMain: #FFF;
+$bgChartMain: #F3F5F6;
+$bgHtmlBody: #E8EBED;
+$bgNone: none;
+$bgTransparent: transparent;
+$borderNone: none;
+$borderColBdp: #5182E4;
+// 全局icon的hover背景色
+$bgColIconHover: rgba(0, 0, 0, 0.06);
+// 全局拖拽
+$bgDragBtnAfter: rgba(0, 0, 0, 0.1);
+$shadowDragBtnAfter: none;
+$bgDragBtnHoverAfter: rgba(0, 0, 0, 0.15);
+// 全局Tab样式
+$borderTabWrap: rgba(0, 0, 0, 0.1);// 有些地方使用border实现的
+$shadowTabWrap: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset;//有些地方是用shadow实现的（工作表)
+$borderTabItem: transparent;
+$borderTabActive: #5182E4;
+$shadowTabActive: 0 -2px 0 0 #5182E4 inset;
+$fontTabActive: #5182E4;
+$weightTab: bold;
+// 表单前面*号的颜色 警示 错误 其中一种颜色
+$fontRequire: #E45151;
+// 块级分隔线
+$borderSeparateLine: rgba(0, 0, 0, 0.1);
+// 弹窗背景色的0.75  用于在弹窗上做蒙层遮盖
+$bgDialogLayerCover: rgba(255, 255, 255, 0.75);
+// 使用主体蓝的0.6  拖动时的placeholder
+$bgDragSortTable: rgba(81, 130, 228, 0.6);
+$opacityBdpIcon: 1;
+$opacityHoverBdpIcon: 0.64;
+$opacitySpecialBdpIcon: 1;
+$opacitySpecialHoverBdpIcon: 0.6;
+
+
+//分页组件
+$bgPaginationLi: rgba(255, 255, 255, 0.75);
+
+// view header的分割线
+$bgViewHeaderSeperateLine: rgba(81, 130, 228, 0.2);
+$imageActiveHighlight: none;
+
+// base-reset.scss start
+// TODO bad solution 命名不规范
+$fontCr999: $fontText;
+// TODO 红色暂定要这个了，估计会改
+$fontCrHint: #E45151;
+// TODO bdp主色，仍需要对应修改
+$fontCrBdp: #5182E4;
+
+$fontA: $fontText;
+$fontADisable: rgba(0, 0, 0, 0.24);
+$fontBody: $fontText;
+$borderBottomInput: rgba(81, 130, 228, 0.6);
+$borderBottomInputFocus: rgba(81, 130, 228, 1);
+$shadowInputError: 0 -2px 0 0 $fontCrHint inset;
+$borderBottomSelect: 0 -1px 0 0 $borderBottomInput inset;
+$borderBottomSelectFocus: 0 -2px 0 0 $borderBottomInputFocus inset;
+$bgTextarea: rgba(81, 130, 228, 0.03);
+$bgTextareaFocus: #FFF;
+$shadowTextarea: 0 0 0 1px rgba(81, 130, 228, 0.6);
+$shadowTextareaFocus: 0 0 0 2px rgba(81, 130, 228, 1);
+$insetShadowTextarea: inset 0 0 0 1px rgba(81, 130, 228, 0.6);
+$insetShadowTextareaFocus: inset 0 0 0 2px rgba(81, 130, 228, 1);
+
+// radio的border
+$borderInputTypeRadio: #A3ABB0;
+// radio的bg
+$bgInputTypeRadio: rgba(255, 255, 255, 1);
+// radio的选中border
+$borderInputTypeRadioChedked: #5182E4;
+// radio的选中bg
+$bgInputTypeRadioChedked: #5182E4;
+// radio的选中bg中的圆心
+$bgColInputTypeRadioChedkedBefore: #FFFFFF;
+// checkbox的border
+$borderInputTypeCheckbox: #A3ABB0;
+// checkbox的bg
+$bgColInputTypeCheckbox: #fff;
+// checkbox的选中bg
+$bgColInputTypeCheckboxChecked: #5182E4;
+// checkbox的半选中bg
+$bgColInputTypeCheckboxHalfChecked: #A3ABB0;
+// checkbox的选中shadow
+$boxshawColInputTypeCheckboxChecked: 0px 0px 0px 1px rgba(81,130,228,0.20);
+// checkbox对勾的/ bg
+$bgColInputTypeCheckboxCheckedBefore: #fff;
+// checkbox对勾的\ bg
+$bgColInputTypeCheckboxCheckedAfter: #fff;
+// checkbox的disabled
+$opacityColInputTypeCheckboxDisabled: 0.4;
+$bgColInputWebkitAutofill: transparent;
+$fontSelect: #29303B;
+
+// errTip
+$bgColErrTips: #5153E4;
+$fontErrTips: #FFF;
+$shadowErrTips: 0 0 6px 0 rgba(0, 0, 0, 0.1), 0 12px 24px 0 rgba(0, 0, 0, 0.3);
+// 红色底的 errTip
+$bgColErrTipsV2: #5153E4;
+$fontErrTipsV2: #FFF;
+$shadowErrTipsV2: 0px 0px 6px 0px rgba(0, 0, 0, 0.15), 0px 8px 12px 0px rgba(81, 82, 228, 0.12);
+
+// 进度条颜色
+/* 下面为进度条颜色 如：帐号配额 统一用logo背景色 及其 对应0.15 */
+$bgProgressBarBottom: rgba(0, 0, 0, 0.06);
+$bgProgressBarTop: rgba(81, 130, 228, 1);
+
+// 日历
+$bgDateRangeWrap: $bgMain;
+$fontDateRangWrap: $fontTextTip2;
+$shadowDateRangeWrap:  0px 2px 4px 0px rgba(0,0,0,0.30), 0px 10px 24px 0px rgba(0,0,0,0.30);
+$fontDateRangeTitle: $fontTextActive2;
+
+
+$bgColBoxA: $bgMain;
+
+// 下面这个用的是$bgDropdownItemHover的值
+$bgColElemBgGray: rgba(232, 235, 237, 0.6);
+
+// 选中文字的样式
+$bgColSelection: rgba(81, 130, 228, 0.2);
+$fontSelectionMozFocus: transparent;
+$textShadowSelectionMozFocus: 0 0 0 #000;
+$fontDatePickerSpanSwitch: rgba(10,18,32,0.87) !important;
+$fontDatePickerSpanNormal: rgba(10,18,32,0.64) !important;
+$fontDatePickerSpanDisabled: rgba(10,18,32,0.38) !important;
+$fontDatePickerSpanHighLight: rgba(255,255,255,1) !important;
+$bgDatePickerSpanNone: none;
+$bgColDatePickerSpanTransparent: transparent !important;
+$bgColDatePickerNow: #5153E4 !important;
+$bgColDatePickerSpanNormal: rgba(81,130,228,0.4) !important;
+$bgColDatePickerSpanHighLight: #5182E4 !important;
+$borderDatePickerSpanTransparent: 1px solid transparent;
+$borderDatePickerSpanHighLight: 1px solid #5182E4 !important;
+$colBarTrackIeBdp: transparent;
+$colBar3dlightIeBdp: transparent;
+$colBarDarkshadowIeBdp: transparent;
+$colBarArrowIeBdp: transparent;
+$colBarFaceIeBdp: transparent;
+$colBarHighlightIeBdp: transparent;
+$colBarShadowIeBdp: transparent;
+$colBarTrackIeBdpDisplayThemeLight: transparent;
+$colBar3dlightIeBdpDisplayThemeLight: transparent;
+$colBarDarkshadowIeBdpDisplayThemeLight: transparent;
+$colBarArrowIeBdpDisplayThemeLight: transparent;
+$colBarFaceIeBdpDisplayThemeLight: transparent;
+$colBarHighlightIeBdpDisplayThemeLight: transparent;
+$colBarShadowIeBdpDisplayThemeLight: transparent;
+$colBarTrackIeBdpDisplayThemeDark: #1F2236;
+$colBar3dlightIeBdpDisplayThemeDark: #2B2E49;
+$colBarDarkshadowIeBdpDisplayThemeDark: #2B2E49;
+$colBarArrowIeBdpDisplayThemeDark: #2B2E49;
+$colBarFaceIeBdpDisplayThemeDark: #2B2E49;
+$colBarHighlightIeBdpDisplayThemeDark: #2B2E49;
+$colBarShadowIeBdpDisplayThemeDark: #2B2E49;
+// base-reset.scss end
+
+// start common.scss
+// 加载loading
+$bgLoaderOverLay: rgba(213, 217, 220, 0.94);
+$bgLoaderLoadingItem: #5484E1;
+$bgBaseLoadingLayerNeedBg: #FFF;
+
+
+// 全站默认btn
+$bgBdpBtn: rgba(245, 247, 248, 1);
+$bgBdpBtnDisabled: rgba(255, 255, 255, 0.3); // 目前暂定废弃，但貌似btn 有bug
+$opacityBdpBtnDisabled: 0.3;
+$bgBdpBtnHover: #FFF;
+$shadowBdpBtn: 0px 1px 1px 0px rgba(0,0,0,0.06), inset 0px -1px 0px 0px rgba(0,0,0,0.10), inset 0px 0px 0px 1px rgba(0,0,0,0.15), inset 0px 2px 0px 0px rgba(255,255,255,0.50);
+$shadowBdpBtnHover: 0px 2px 4px 0px rgba(0, 0, 0, 0.1), inset 0px -1px 0px 0px rgba(0, 0, 0, 0.10), inset 0px 0px 0px 1px rgba(0, 0, 0, 0.15), inset 0px 2px 0px 0px rgba(255, 255, 255, 0.50);
+$fontBdpBtn: $fontText;
+$fontBdpBtnDisabled: rgba(0, 0, 0, 0.24);
+$fontBdpBtnHover: $fontTextHover;
+
+//蓝边btn样式
+$shadowBdpBtnBlue: 0 0 0 1px #5182E4 inset;
+
+$bgBdpBtnVer2: transparent;
+$fontBdpBtnVer2: #5182E4;
+$shadowBdpBtnVer2:  0 0 0 1px rgba(81, 130, 228, 0.6) inset;
+$shadowThickerBdpBtnVer2:  0 0 0 2px rgba(81, 130, 228, 0.6) inset;
+
+// 有btn的下拉框
+// 下拉框btn
+$bgCommonDropdownBtn: $bgBdpBtn;
+$fontCommonDropdownBtn: $fontBdpBtn;
+$borderCommonDropdownBtn: 0 -1px 0 0 rgba(81, 130, 228, 0.6) inset;
+// 下拉框btn hover
+$bgCommonDropdownBtnHover: $bgBdpBtnHover;
+$fontCommonDropdownBtnHover: $fontTextHover;
+$shadowCommonDropdownBtnHover: $shadowBdpBtn;
+// 下拉框分隔线bg
+$bgCommonDropdownBtnCdbaBefore: rgba(81, 130, 228, 0.15);
+$bgCommonDropdownBtnCdbaHover: rgba(232, 235, 237, 0.6);
+// 下拉框bg
+$bgDropdownWrap: #FFF;
+// 下拉框单个被hover bg
+$bgDropdownItemHover: rgba(232, 235, 237, 0.6);
+// 下拉框shadow  (加深了阴影——表格上显示效果更好)
+$shadowDropdownWrap: 0px 0px 6px 0px rgba(0, 0, 0, 0.1), 0px 10px 12px 0px rgba(170, 182, 206, 0.36);
+$shadowDropdownWrapIE: 0px 0px 6px 0px rgba(0, 0, 0, 0.1), 0px 10px 12px 0px rgba(170, 182, 206, 0.36);
+/* $shadowDropdownWrap存在第二层级的shadow */
+$shadowDropdownWrapSecondLayer: 0px 2px 4px 0px rgba(0, 0, 0, 0.1), 0px 16px 24px 0px rgba(81, 129, 228, 0.1);
+// 筛选器下拉
+$bgColFilterIFilterIName: transparent; //#191A2C;
+$borderFilterIFilterINameAfter: #A3ABB0 rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+$bgFilterIFilterIName: url(../icons/ico_triangle_down.png?__sprite) center right no-repeat;
+// View Header
+$bgColViewHeader: #F0F2F3;
+$shadowViewHeader: 0px 0px 6px 0px rgba(0, 0, 0, 0.10), 0px 10px 12px 0px rgba(170, 182, 206, 0.20), inset 0px -1px 0px 0px rgba(255, 255, 255, 0.30);
+$shadowViewHeaderV2: inset 0px -1px 0px 0px rgba(255, 255, 255, 0.30);
+$fontViewHeaderH2: $fontText;
+$shadowBtnLayerHoverLine: 0 -1px 0 0 rgba(81, 130, 228, 1) inset;
+$fontViewHeaderColorBlue: #5182E4;
+$bgColViewHeaderWrapViewHeader: transparent;
+$shadowViewHeaderWrapViewHeader: none;
+//搜索框样式
+$iconBdpSearchInput:'../icons/ico_search.png';
+
+/*选择仪表盘or工作表信息框（用户、模板、工作区会用到）*/
+$bgBdpInfoBox: #FFF;
+$fontBdpInfoBoxDt: $fontTextTip;
+$shadowBdpInfoBox: 0px 0px 6px 0px rgba(0, 0, 0, 0.06), 0px 10px 12px 0px rgba(170, 182, 206, 0.15);
+
+$bgColInputTypeTextBdpQueryTextLeft: transparent;
+$bgQueryBoxSearchList: $bgDropdownWrap;
+$shadowQueryBoxSearchList: $shadowDropdownWrap;
+// 过滤器公共样式
+$bgFilterWrapDiv: $bgChartMain;
+$bgPreviewTitleTab: $bgChartMain;
+// TODO 这是个坑，由于结构不一致，却用css来实现效果。需要修改结构
+$shadowPreviewTitleTab: 0 1px 0 0 rgba(0,0,0, 0.06), inset 0 1px 0 0 rgba(0, 0, 0, 0.06), inset 0 2px 0 0 rgba(0, 0, 0, 0.03);
+$borderBottomPreviewTitleTabItem: transparent;
+$borderBottomPreviewTitleTabItemActive: #5182E4;
+$fontPreviewTitleTabItemActive: $fontTextActive2;
+// 左侧列表（可以公共使用）
+$shadowCommonList: 1px 0px 1px 0px rgba(0,0,0,0.06), inset -1px 0px 0px 0px rgba(255, 255, 255, 0.2);
+$bgCommonList: transparent;
+$bgCommonListLiHover: #F3F5F6;
+$bgCommonListLiActive: #FFF;
+$shadowCommonLiActive:  none;
+$fontCommonLiActive: #5182E4;
+$bgCommonListHover: #f3f5f6;
+/*************bdptablenormal---start*************/
+// 自定义遮盖表头
+$bgTbHeader: #ECEFF1;
+$borderTbHeader: #DFE4E7;
+$fontTbHeader: $fontText;
+// 表格
+$borderrderBdpTableNormal: #DFE4E7;
+$bgBdpTableNormalTrOdd: #FFF;
+$bgBdpTableNormalTrEven: #F7F8F9;
+$bgBdpTableNormalThead: #ECEFF1;
+$fontBdpTableNormal: rgba(10,18,32,0.87);
+$fontBdpTableNormalThead: $fontText;
+/*************bdptablenormal---end*************/
+
+// 基本信息、所在分组等、同级板块样式
+$shadowUserInfoCommonDiv: 0px 0px 6px 0px rgba(0, 0, 0, 0.06), 0px 10px 12px 0px rgba(170, 182, 206, 0.15);
+$bgUserInfoCommonDiv: $bgMain;
+
+
+// CodeMirror 控件文本高亮颜色
+$bgCodeMirror: rgba(0,0,0,0.2);
+$fontCodeMirrorCode: rgba(10,18,32,0.87);
+$fontParaisoLightCmKeyword: #F4635D;
+$fontParaisoLightCmString2: #11CB66;
+$fontParaisoLightCmvVariable2: #2DACFC;
+
+//左侧列表
+$bgViewListBodyLiHover: #E8EBED;
+
+$bgBdpPage: #f3f5f6;
+$bgBdpPageActive: #fff;
+$bgBdpPageHover: #fff;
+$colorBdpPageActive: $fontText;
+// 分享未读数
+$bgOuterShareUnread: #EE4B4B;
+$fontOuterShareUnread: #FFF;
+
+
+/**
+ * 添加字段样式
+ * 谷歌统计添加自定义报告
+ */
+
+$borderColorfieldTag: #5182E4;
+$colorfieldTag: #5182E4;
+$borderColorfieldTagBefore: #F0F2F3;
+$borderColorfieldTagAfter: $borderColorfieldTag;
+
+// end common.scss
+
+
+// 全局左侧菜单
+// tab 选中
+$bgActiveLeftMenu: $bgCommonListLiActive;
+// tab hover
+$bgActiveLeftMenuHover: $bgCommonListHover;
+// tab 选中font
+$fontActiveLeftMenu: $fontTextHover;
+// tab 选中shadow
+$shadowActiveLeftMenu: $shadowCommonLiActive;
+
+// start dialog.scss
+$bgNgDialogBgBlock: #FFF;
+$shadowNgDialogBlockShadowRight: 1px 0px 0px 0px rgba(0,0,0,0.15), 2px 0px 0px 0px rgba(0,0,0,0.03);
+$shadowNgDialogBlockShadowBottom: 0px 1px 0px 0px rgba(0, 0, 0, 0.1);
+$shadowNgDialogBlockShadowLeft: -1px 0px 0px 0px rgba(0,0,0,0.15), -2px 0px 0px 0px rgba(0,0,0,0.03);
+$shadowNgDialogBgBlock: 0px 0px 6px 0px rgba(0,0,0,0.06), 0px 10px 12px 0px rgba(118,153,222,0.10);
+$bgNgDialogOverlay: rgba(213, 217, 220, 0.94);
+$bgColNgdialogContent: #F0F2F3;
+$fontNgdialogBtn: rgba(81, 130, 228, 1);
+$shadowNgDialogContent: 0px 2px 4px 0px rgba(0, 0, 0, 0.1), 0px 16px 24px 0px rgba(170, 182, 206, 0.36);;
+$bgNgdialogBtnOk: transparent;
+$bgNgdialogBtnOkHover: rgba(81, 130, 228, 0.1);
+$opacityNgdialogBtnDisabled: 0.4;
+// $bgColNgdialogSelect: #191A2C;
+$bgConfirmDialogContent: #5153E4;
+$fontConfirmDialogContent: #fff;
+$fontConfirmDialogCcOk: #fff;
+$borderConfirmDialogIcoClose: #FFF;
+$fontNgdialogLinkBtn: rgba(81, 130, 228, 1);
+$shadowNgdialogInputFocus: inset 0px -2px 0px 0px #5182E4;
+$borderNgdialogSelect: rgba(81, 130, 228, 0.6);
+// end dialog.scss
+
+// start dashboard.scss
+// 图标title
+$fontGrid: rgba(10,18,32,0.87);
+// 空仪表盘“十”字颜色
+$bgDashAdd: #A3ABB0;
+// 仪表盘bg
+$bgGridsterItem: #FFF;
+$bgEmptyDashAdd: $bgGridsterItem;
+$shadowEmptyDashAddHover: 0px 2px 4px 0px rgba(0,0,0,0.10), 0px 16px 24px 0px rgba(0,0,0,0.10);
+$bgGridsterPreview: rgba(0, 0, 0, 0.06);
+$bgGridsterItemSelected: rgba(255, 255, 255, 0.8);
+$shadowGridsterItemSelected: 0px 2px 4px 0px rgba(0,0,0,0.10), 0px 16px 24px 0px rgba(0,0,0,0.10);
+$shadowGridsterItemHover: 0px 2px 4px 0px rgba(0,0,0,0.10), 0px 16px 24px 0px rgba(170,182,206,0.36);
+$shadowNGridsterItemHover: 0px 1px 2px 0px rgba(0, 0, 0, 0.1), 0px 0px 8px 0px rgba(170, 182, 206, 0.36);
+$shadowFreeGridItemHover: 0px 0px 4px 0px rgba(0, 0, 0, 0.1), 0px 0px 12px 0px rgba(170, 182, 206, 0.36);
+$fontItemFilterItem: $fontTextTip;
+$fontWarnContentFieldLogic: $fontText;
+$fontWarnContentActive: #E45151;
+$borderBottomShareTabActive: $borderTabActive;
+$borderDashEditModeGridster: rgba(212, 217, 220, 1);
+$bgDashEditWrapper: #FFF;
+$shadowDashEditWrapper: none;
+$borderRightDashEditModeBlock: $bgViewHeaderSeperateLine;
+$bgExportImgModalDisabled: rgba(0, 0, 0, .06);
+$shadowHighlightChart: 0px 0px 0px 2px rgba(81, 130, 227, 0.15), inset 0px 0px 0px 2px #5182E4;
+$borderDashOneBlockGridsterItem: rgba(81, 130, 228, 0.3);
+$fontDashOnBlockChartTitleBd: rgba(10,18,32,0.87);
+$bgNoTitleChartOperate: #FFF;
+$bgShopexEmptyDashWrap: transparent;
+$bgSelectProjDashAdd: rgba(0, 0, 0, 0.06);
+
+/*ta toolbar*/
+$bgTaToolbarActive: rgba(232, 235, 237, 0.6);
+$shadowTaColorPicker: 0 0 3px #000;
+
+/*个人版使用模板提示*/
+$bgStepItemCirCle: rgba(81,130,228,0.06);
+$borderStepItemCirCle: solid 1px rgba(81,130,228,0.7);
+// end dashboard.scss
+
+
+//start side-project.scss
+$fontDashName: rgba(81,130,228,1);
+$bgDashListActive: #FFF;
+$bgDashListHover: #F3F5F6;
+$shadowDashListActive: none;
+$borderCreateBlockUnreadAfter: #E45151;
+$fontSearchChartListDashName: $fontTextTip;
+$fontSearchChartListSearchResultListNum: #FFF;
+$fontSearchChartListSearchResultListMore: #5182E4;
+$shadowSearchChartListSRTNotFirstChild: inset 0px 1px 0px 0px $borderSeparateLine;
+$opacitySearchChartListSearchResultListMoreHover: 0.7;
+$bgDashItemTag: rgba(0, 0, 0, 0.06);
+//end side-project.scss
+
+// start chart-chain.scss
+$bgSideNouseWrap: rgba(232, 235, 237,0.00) 0%, #E8EBED 66%;
+$opacityChartChainMainTable: 0.4;
+$bgChartChainLabel: rgba(0, 0, 0, 0.06);
+$fontChartChainMainTable:$fontText;
+$borderBottomChartChainMainTable: rgba(0, 0, 0, 0.1);
+// end chart-chain.scss
+
+// start chart-jump.scss
+$colorChartJumpSelectTitle:rgba(11, 19, 332, 38);
+// end chart-jump.scss
+
+// start cc1.0.2.scss
+// 错误信息提示
+$fontHzTip: #FFF;
+$shadowHzTip: 0px 0px 6px 0px rgba(0,0,0,0.10), 0px 12px 24px 0px rgba(0,0,0,0.30);
+$bgHzTipError: #5153E4;
+
+$borderAngularUiTreePlaceholder: rgba(81,130,228,.1);
+$borderChartArgsRow: rgba(0, 0, 0, 0.1);
+$borderChartBox: rgba(0, 0, 0, 0.1);
+$borderChartArgsDtYoIcon: transparent;
+// 编辑模板“层级”
+$bgColTag: #5182E4;
+$fontTag: #FFF;
+$bgColTagHover: #5182E4;
+$bgAngularUiTreeHandleHover: rgba(0, 0, 0, 0.06);
+// 筛选器
+$bgColFilterLayerTag: #E8EBED;
+$fontFilterLayerShowRange: #FFF;
+
+$fontFilterLayerTag: $fontText;
+$bgDragLevelItemTagName: #F3F5F6;
+$bgColNotSortableTag: rgba(108, 110, 230, 1);
+// 纬度bg
+$bgColNotSortableTagHover: rgba(108, 110, 230, 0.8);
+// 纬度 + - bg
+$bgColChartArgsDtYoAddY: rgba(81,130,228,.1);
+$bgColChartArgsDtYoDelY: $bgColChartArgsDtYoAddY;
+$bgColChartArgsDtYoAddYHover: rgba(81,130,228,.2);
+$bgColChartArgsDtYoDelYHover: $bgColChartArgsDtYoAddYHover;
+$bgFilterLayerTagHover: #DFE4E7;
+$bgColorDragLevelItemActiveTagName: #F3F5F6;
+
+$shadowChartRightBlock: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.06);
+// $shadowChartArgs: 0 0 2px 0 rgba(0, 0, 0, .08);
+$shadowChartMain: 0px 2px 4px 0px rgba(0,0,0,0.10), 0px 10px 24px 0px rgba(0,0,0,0.06);
+$shadowHrSplit: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.06);
+$shadowChartDataInfo: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.06);
+
+// 特殊左侧列表...的icon的hover bg
+$bgCollineOpItemHover: rgba(243, 245, 246, 0.96);
+$bgColRetentionModalBlock: $bgNgDialogBgBlock;
+$shadowRetentionModalBlock: $shadowNgDialogBgBlock;
+$bgColChartBoxTableFlip: transparent;
+$borderTopAxisTypeArrowDown: #A3ABB0;
+$borderTopFliterLayerNameAfter: #A3ABB0;
+$borderBorderBottom5182E4: #5C8DE7;
+
+// 商派引导
+$bgColGuideLayerShopex: $bgNgDialogOverlay;
+$bgGuideLayerShopexViewHeader: none;
+// end cc1.0.2.scss
+
+
+//start chart-type.scss
+$shadowChartTypeAActive: 0px 0px 0px 2px rgba(81,130,227,0.06), inset 0px 0px 0px 2px rgba(81,129,228,0.60);
+$bgChartTypeAActive: #FFF;
+$bgChartTypeAHover: rgba(255,255,255,0.6);
+//end chart-type.scss
+
+//start color-setting.scss
+$bgDropDownMenu: #FFF;
+$bgColorSettingTag: #E8EBED;
+$borderColorSettingTagAfter: #F3F5F6;
+// 即V这个图片
+// $borderTopCaret: #A3ABB0;
+$shadowColorThumbChecked: 0px 0px 0px 1px rgba(0, 0, 0, 0.06), 0px 1px 2px 0px rgba(0, 0, 0, 0.20), inset 0px 0px 0px 2px rgba(255,255,255,0.6);
+//end color-setting.scss
+
+
+
+//start chart-edit.scss
+$borderDragLevelItemActiveTagName: #6C6EE6;
+$borderDragLevelItemTagName: #CBCDCE;
+$borderDragLevelItemActiveTagBefore: $borderDragLevelItemActiveTagName;
+$borderDragLevelItemTagAfter: #F3F5F6;
+$borderDragLevelItemTagBefore: $borderDragLevelItemTagName;
+$borderDragLevelItemTagHoverName: rgba(0, 0, 0, 0.2);
+$borderDragLevelItemTagHoverBefore: $borderDragLevelItemTagHoverName;
+$shadowDragLevelItemTagName: 0 1px 0 rgba(0, 0, 0, .06);
+$fontDragLevelItemTagName: $fontText;
+
+$borderDragTargetDfLiLine: rgba(0, 0, 0, 0.06);
+$fontDataFormulaAAcitve: #5182E4;
+
+// 与dropdown的样式一样
+$boxshadowChartBoxChart: 0px 2px 4px 0px rgba(0, 0, 0, 0.1), 0px 16px 24px 0px rgba(81, 129, 228, 0.1);
+$fontChartPreviewDataTiEm: $fontRequire;
+$bgChartLeftTitleDescHover: rgba(255,255,255,0.6);
+
+//end chart-edit.scss
+
+
+// start choose-table.scss
+// 首页添加图表弹层
+$bgChooseTableTabHdTabHdItem: #FFF;
+$shadowChooseTableTabHdTabHdItem: 0px 0px 2px 0px rgba(0,0,0,0.12), 0px 2px 4px 0px rgba(118,153,222,0.10);
+$shadowChooseTableTabItemActive: 0px 0px 0px 2px rgba(81,130,227,0.15), inset 0px 0px 0px 2px #8BB1FF;
+$shadowChooseTableTabItemHover: inset 0px 0px 0px 1px rgba(81,130,227, 0.6);
+// end choose-table.scss
+
+// start haizhicharts.scss
+$weightChartTableTh: bold;
+$weightDatabaseListTh: bold;
+$fontChartTableTh: $fontText;
+$bgColChartTableTh: #ECEFF1;
+$fontChartTableTd: rgba(10,18,32,0.87);
+$bgColHzTableSummary: #E3E8EC;
+$bgColHzTableSummaryTdValue: #E3E8EC;
+
+$bgColGuideLabelLeft: #5182E4;
+$bgColGuideLabelText: #fff;
+$borderGuideLabelLeftAfter: transparent transparent transparent #5182E4;
+$borderGuideLabelLeftTrueAfter: transparent transparent #5182E4 transparent;
+$borderGuideLabelRightAfter: transparent #5182E4 transparent transparent;
+$shadowGuideLabelText: 0px 0px 6px 0px rgba(0, 0, 0, 0.1), 0px 10px 12px 0px rgba(170, 182, 206, 0.36);
+$fontGuideLabelText: #666;
+$bgChartTooltip: #FFF;
+$shadowChartToolTip: $shadowDropdownWrap;
+$titleChartTooltip: $fontText;
+$totalTooltip: #666;
+
+$borderHzTableTh: #DFE4E7;
+$borderChartBoxHzTable: #DFE4E7;
+$fontHzChartTitleText: $fontText;
+$borderHzChartTitle: transparent;
+$fontSolidguageCustom: #fff;
+$borderSolidGaugeAngle: #F2F2F2;
+$fontChartTextBoxChartTextValue: $fontText;
+$shadowNoscrollNFCtHover: 0 0 0 1px rgba(81,130,228,0.2);
+$shadowChartTitleEditHover:1px 1px 1px rgba(0, 0, 0, 0.2);
+// end haizhicharts.scss
+
+// start data-source.scss
+
+// 左侧列表
+$bgDsDbHover: $bgDropdownItemHover;
+$bgDsDbActive: $bgCommonListLiActive;
+$shadowDsDbActive: $shadowCommonLiActive;
+$shadowDsAside: $shadowCommonList;
+$fontDsDbActive: #5182E4;
+// 工作表标签
+$bgDsDbTitleDsTag: rgba(81, 130, 228,0.36);
+$fontDsDbTitleDsTag: $fontTextActive2;
+// 工作表更多的dropdown
+$bgDsDbTitleOptionUl: $bgDropdownWrap;
+$bgDsDbTitleOptionLlHover: $bgDropdownItemHover;
+$shadowDsDbTitleOptionUl: $shadowDropdownWrap;
+$fontDsDbTitleOptionLl: $fontText;
+$borderDownMenuBtnSpan: #A4A4A4 transparent transparent transparent;
+// 工作表tab选未中
+$borderBottomTabHeaderItem: transparent;
+$shadowTabHeader: $shadowTabWrap;
+// 工作表tab选中
+$fontTabHeaderItemActive: #5182E4;
+$borderBottomTabHeaderItemActive: $borderTabActive;
+// 数据筛选bg
+$bgWorktbPreviewFilter: $bgUserInfoCommonDiv;
+$shadowWorktbPreviewFilter: $shadowUserInfoCommonDiv;
+/*工作表表格主体部分(点击表头编辑) start*/
+// $borderTableWrapNgEditWrapInput: rgba(81, 130, 228, 0.6);
+$bgTableWrapNgEditWrapInputDisabled: transparent;
+$weightTableWrapNgEditWrapInputDisabled: bold;
+/*工作表表格主体部分 end*/
+/*************关联概况Tab---start*************/
+//使用此工作表创建的工作表
+$bgTabRelationListBlockBd: #FFF;
+$shadowTabRelationListBlockBd: 0px 0px 6px 0px rgba(0, 0, 0, 0.06), 0px 10px 12px 0px rgba(170, 182, 206, 0.15);
+$borderBottomMergeTableHint: 1px solid rgba(0, 0, 0, .12);
+// 分配的用户或分组 (样式应同上，但是结构中是不同的)
+$bgRelationEmpty: $bgTabRelationListBlockBd;
+$shadowRelationEmpty: $shadowTabRelationListBlockBd;
+/*************关联概况Tab---end*************/
+/*************模型结构Tab---start*************/
+// 数据聚合模型上半部分
+$bgModelAgv: $bgTabRelationListBlockBd;
+$shadowModelAgv: $shadowTabRelationListBlockBd;
+$fontModelAgvH5: $fontTextTip;
+$borderModelAgvLi: rgba(0, 0, 0, 0.2);
+// 下面的过滤器
+$bgModelJoinFilter: $bgFilterWrapDiv;
+$bgModelJoinFilterH5: $bgPreviewTitleTab;
+$shadowModelJoinFilterH5: $shadowPreviewTitleTab;
+$borderModelJoinFilterH5After: #A3ABB0 transparent transparent transparent;
+$fontModelJoinFilterH6: rgba(10,18,32,0.87);
+$bgModelJoinFilterLiAfter: rgba(81, 130 ,228, 0.6);  // 疑似没法做
+$bgModelJoinFilterItemBefore: rgba(81, 130 ,228, 0.6);
+$bgModelJoinFilterItemAfter: rgba(81, 130 ,228, 0.6);
+
+
+
+/*************模型结构Tab---end*************/
+/*************字段设置Tab------start*************/
+$bgTbEditFieldHeader: $bgTbHeader;
+$borderBottomTbEditFieldOne: $borderTbHeader;
+$borderTopTbEditFieldOne: $borderTbHeader;
+$fontTbEditFieldInput: $fontBdpTableNormal;
+// 字段类型下拉菜单
+// $bgTbEditFieldDropdownMenuEdit: transparent;
+$fontTbEditFieldDropdownMenu: $fontBdpTableNormal;
+$borderTbEditFieldHeader: $borderCommonDropdownBtn;
+$bgPreviewSelectType: $bgDropdownWrap;
+$bgPreviewSelectTypePHover: $bgDropdownItemHover;
+$shadowPreviewSelectType: $shadowDropdownWrap;
+$fontTbEditFieldDropdownMenuEdit: $fontCommonDropdownBtn;
+/*************字段设Tab------end*************/
+/*************工作表预览表头------start*************/
+$borderBottomTbHeaderLi: $borderTbHeader;
+$bgBottomTbHeaderLi: $bgTbHeader;
+$borderLeftTbHeaderLiFirstChildDiv: $borderTbHeader;
+$borderRightTbHeaderLiDiv: $borderTbHeader;
+$bgTbDetailTableTh: $bgTbHeader;
+// 新加字段
+$bgTbHeaderLiNew: #FFF;
+$fontTbHeaderLiNewNgEditWrap: #5182E4;
+/*************工作表预览表头------end*************/
+/*************新建图表dialog------start*************/
+$fontDialogWarning: $fontCrHint;  // 设计没给颜色
+$bgUploadData: $bgColNgdialogContent;
+$borderTopUploadData: transparent;
+$bgUploadDataUploadOperateH2: #F9F9FA;
+$fontUploadDataUploadOperateH2: $fontText;
+$borderRightUploadDataUploadOperateH2: transparent;
+$borderTopUploadDataUploadOperateH2: transparent;
+$shadowUploadDataUploadOperateH2: 0 1px 1px 0 rgba(0,0,0,0.1);
+$bgUploadDataUploadOperateH2Hover: #FFF;
+$fontUploadDataUploadOperateH2Hover: $fontTextHover;
+$shadowUploadDataUploadOperateH2Hover: 0px 0px 10px 0px rgba(0,0,0,0.12), 0px 10px 12px 0px rgba(118,153,222,0.10);
+$fontUploadDataUploadOperateDisabled: $fontTextDisabled;
+$fontUploadDataTips: $fontText;
+$fontUploadDataTipsWarning: $fontDialogWarning;
+$borderUploadDataArrowUp: transparent transparent #F9F9FA transparent; // 设计没给颜色
+$borderUploadDataArrowUpInner: transparent transparent $bgColNgdialogContent transparent;			// 设计没给颜色
+// 替换数据选择（全表/单表）和上面相同，但是因为上面用的是id属性所以多了一套
+$bgReplaceMenu: 							$bgUploadData;
+$borderReplaceMenu: 						$borderTopUploadData;
+$fontReplaceMenuReplaceOperateH2: 			$fontUploadDataUploadOperateH2;
+$borderRightReplaceMenuReplaceOperateH2: 	$borderRightUploadDataUploadOperateH2;
+$borderTopReplaceMenuReplaceOperateH2:		$borderTopUploadDataUploadOperateH2;
+$shadowReplaceMenuReplaceOperateH2:			$shadowUploadDataUploadOperateH2;
+$bgReplaceMenuReplaceOperateH2Hover:		$bgUploadDataUploadOperateH2Hover;
+$bgReplaceMenuReplaceOperateH2:		$bgUploadDataUploadOperateH2;
+$fontReplaceMenuReplaceOperateH2Hover:		$fontUploadDataUploadOperateH2Hover;
+$shadowReplaceMenuReplaceOperateH2Hover: 	$shadowUploadDataUploadOperateH2Hover;
+$fontReplaceMenuReplaceOperateDisabled:		$fontUploadDataUploadOperateDisabled;
+$fontReplaceMenuTips:						$fontUploadDataTips;
+$fontReplaceMenuTipsWarning:				$fontUploadDataTipsWarning;
+$borderReplaceMenuArrowUp:					$borderUploadDataArrowUp;
+$borderReplaceMenuArrowUpInner:				$borderUploadDataArrowUpInner;
+// 选择excel文件表格
+$bgSelectSheetList: $bgNgDialogBgBlock;
+$shadowSelectSheetList: $shadowNgDialogBgBlock;
+$bgUploadTaskAddLiLabelHover: $bgNgDialogBgBlock;
+$fontUploadTaskAddLiLabelHover: $fontTextHover;
+// 单文件替换dialog
+$bgReplaceListTitleUpdateTime: $bgTbHeader;
+$fontReplaceListBtnUpload: $fontNgdialogBtn;
+// 上传数据结构调整
+$bgUploadResultTbSchemaListBox: $bgNgDialogBgBlock;
+$shadowUploadResultTbSchemaListBox: $shadowNgDialogBgBlock;
+
+$borderSchemaTableOpBtn: $borderNgdialogSelect;
+$fontSchemaTableOpBtn: $fontNgdialogBtn;
+$fontDiffLeft: $fontCrHint;
+$fontDiffRight: $fontTextActive;
+// 批量上传dialog
+$fontSelectBatchFilesBtn: $fontNgdialogBtn;
+$bgDisplayMultipleFiles: $bgNgDialogBgBlock;
+$shadowDisplayMultipleFiles: $shadowNgDialogBgBlock;
+$fontDisPlayMultipleFilesOperate: $fontNgdialogBtn;
+
+// 进度条相关
+$fontProgressResultTipUploadFaile: $fontCrHint;
+$fontProgressResultTipUploadComplete: #4BB52D;
+/*************新建图表dialog------end*************/
+// 拖拽按钮
+$bgDragBtn: none;
+$bgDragBtnHover: rgba(0, 0, 0, 0.05);
+
+
+$borderDsListFolderNameHasUnreadAfter: $fontRequire;
+$bgTbListWorksheetSortPlaceholder: $bgDragSortTable;
+$bgTableWrapLiNewFieldMoreHover: $bgColIconHover;
+$bgUploadTaskUploadTaskAddSheetName: none;
+
+// 工作更新状态提示框
+$bgTableStatusHint: $bgColErrTips;
+$fontTableStatusHint: $fontErrTips;
+$shadowTableStatusHint: $shadowErrTips;
+// 工作更新状态提示框 错误提醒
+$bgTableStatusHintError: $bgColErrTipsV2;
+$fontTableStatusHintError: $fontErrTipsV2;
+$shadowTableStatusHintError: $shadowErrTipsV2;
+
+
+$bgAppendProgressBarBottom: $bgProgressBarBottom;
+$bgAppendProgressBarTop: $bgProgressBarTop;
+
+$bgUploadErrorTip: $bgDropdownWrap;
+$borderLeftUploadErrorTipAfter: transparent;
+$borderRightUploadErrorTipAfter: transparent;
+$borderBottomUploadErrorTipAfter: $bgDropdownWrap;
+$fontCreatApiUnionSelectListTagSpan: $fontCrHint;
+
+$borderBottomCreatDbSwitchConfigHr: $borderTabWrap;
+$fontCreateDbApiSwitchConfigSpanActive: $fontTabActive;
+$shadowCreateDbApiSwitchConfigSpanActive: 0px 2px 0px 0px $borderTabActive;
+
+// 工作表未查看提醒
+$borderdsDbtitleSharedUnreadAfter: $fontRequire;
+
+
+$borderUploadResultRenameGroup: $borderSeparateLine;
+
+$fontTabRalationListBlockUserDt: $fontTextTip;
+$borderBottomTabRalationListBlockUserDd: $borderSeparateLine;
+
+$borderTableModifyHintDiv: $borderSeparateLine;
+
+$fontSelectDbLabel: $fontText;
+
+$fontSelectDbUploadWarning: $fontTextTip;
+$fontSelectDbUploadWarningP: $fontTextTip;
+$fontSelectDbUploadWarningPartWarningPartLeft: $fontTextTip;
+$fontSelectDbUploadWarningPartWarningPartRight: $fontTextTip;
+$fontUploadTaskWarning: $fontRequire;
+$fontUploadResultDataSchemaP: $fontRequire;
+$fontTableInfoNum: $fontRequire;
+$bgUpdateTimeBefore: rgba(81, 130, 228, 0.2);
+
+$fontNoTbPreview: $fontTextTip;
+$fontReselectBtn: $fontTextHover;
+$fontDsListFolderTbListNullExcel: $fontTextTip;
+$bgDsListFolderTbListNullExcel: none;
+$fontTableModifyHintH5: $fontTextActive;
+$fontTableModifyHintP: $fontTextActive2;
+$fontExtractContentInfoBoxNoWorkSheet: $fontTextTip;
+$fontPartitionSetDialogRemoveSetPartition: $fontTextActive;
+$fontDisplayMultipleFilesDisplayMultipleFilesTip: $fontTextTip;
+$fontBatchAppendProressPartUploadWarningP: $fontTextTip;
+$fontCreatDbAuxiliartFieldTip: $fontTextTip;
+$fontCreatDbAuxiliartFieldUl: $fontText;
+$fontCreatApiSuccess: $fontText;
+$fontErrExportBoxExport: $fontTextActive;
+// 上传成功
+$fontProgressResultTipUploadComplete: $fontText;
+
+$shadowFieldModel:  0 -1px 0 0 rgba(81, 130, 228, 0.15) inset;
+$colorUnionPrevBtn: $fontText;
+$bgColorUnionPrevBtnHover: rgba(0,0,0,0.05);
+// end data-source.scss
+
+// start union_table.scss
+// 模型+过滤器背景
+$bgColUnionTableList: $bgPreviewTitleTab;
+// 模型表头
+$bgUnionTableTlistTheadList: #FFF;
+// 模型表身
+$bgUnionTableListFieldName: #5182E4;
+$bgUnionTableListFieldNameNthChildEven: $bgUnionTableListFieldName;
+$fontUnionTableListFieldName: #fff;
+$borderUnionTableListFieldFnHelperField: rgba(81,130,228,0.6);
+$bgUnionTableListFieldFnHelperField: rgba(81,130,228,0.15);
+// 下拉编辑
+$borderTopUnionTableListTnArrowDown: #A3ABB0;
+$borderLeftUnionTableListTnArrowDown: transparent;
+$borderRightUnionTableListTnArrowDown: transparent;
+$bgUnionTableListSelectedFound: rgba(255,255,255,0.6);
+$bgUnionTableListTnOperateList: $bgDropdownWrap;
+$shadowUnionTableListTnOperateList: $shadowDropdownWrap;
+$bgUnionTableListTnOlOperateItemHover: $bgDropdownItemHover;
+// 选择字段进行合并dialog
+$bgSelectFieldsWrap: $bgNgDialogBgBlock;
+$shadowSelectFieldsWrap: $shadowNgDialogBgBlock;
+// 批量追加上传dialog
+$bgUnionSelectTableBox: $bgNgDialogBgBlock;
+$shadowUnionSelectTableBox: $shadowNgDialogBgBlock;
+$bgColUnionSelectTableContentRlBLiHover: rgba(0, 0, 0, 0.06);
+$bgUnionSelectTableLevel2LiHover: rgba(0, 0, 0, 0.06);
+// 过滤器样式
+$bgColPreviewTitle: $bgPreviewTitleTab;
+$shadowColPreviewTitle: $shadowPreviewTitleTab;
+$borderBottomPreviewTitle: $borderBottomPreviewTitleTabItem;
+$borderBottomPreviewTitleActive: $borderBottomPreviewTitleTabItemActive;
+$fontPreviewTitleActive: $fontPreviewTitleTabItemActive;
+$bgUnionTablePreview: $bgFilterWrapDiv;
+// 数据聚合
+$shadowPolymerMenu: $shadowCommonList;
+$bgPolymerMenu: $bgCommonList;
+$borderBottomPolymerMenuHd: rgba(0,0,0,0.1);
+$bgPolymerContent: $bgChartMain;
+$bgPolymerMenuListFieldHandlerSpanHover: $bgColIconHover;$borderPolymerContentHdDl: rgba(0, 0, 0, 0.06);
+$fontPolymerContenBdTableScrollTablePreviewTip: $fontTextTip;
+//过滤器
+$bgPolymerContentFilter: $bgPreviewTitleTab;
+$shadowPolymerContentFilterTitle: $shadowPreviewTitleTab;
+// end union_table.scss
+
+
+// start sql_table.scss
+// sql左侧列表
+$bgDsListTableFieldHover: $bgActiveLeftMenuHover;
+$borderLeftSideMenuArrow: #A3ABB0;
+$borderTopSideMenuArrow: transparent;
+$borderBottomSideMenuArrow: transparent;
+$borderLeftSideMenuArrowRight: #A3ABB0;
+$borderTopSideMenuArrowRight: transparent;
+$borderBottomSideMenuArrowRight: transparent;
+// sql输入框
+$bgSqlTableBdCodeMirror: $bgUserInfoCommonDiv;
+$shadowSqlTableBdCodeMirror: $shadowUserInfoCommonDiv;
+// sql输入框右侧
+$shadowSwlTableBdFormulaBlock: -1px 0 0 0 rgba(0,0,0,0.1), -2px 0 0 0 rgba(118, 153, 223,0.06);
+$bgSwlTableBdFormulaBlock: $bgUserInfoCommonDiv;
+$bgSwlTableBdFormulaBlockMask: transparent;
+$borderSqlTableBdOpenFormula: rgba(0, 0, 0, 0.1);
+$bgSqlTableBdSelectPane: $bgUserInfoCommonDiv;
+$bgSqlTableBdSelectPaneLiHover: $bgActiveLeftMenuHover;
+$bgModelScriptContent: $bgSqlTableBdCodeMirror;
+$bgModelScriptContentCodeMirror: $bgSqlTableBdCodeMirror;
+$shadowModelScriptContentCodeMirror: none;
+$bgDsListTnhSqlDropDown: $bgColIconHover;
+$fontSqlTableBdErrMsg: $fontRequire;
+$fontSqlSyntaxHelp: $fontText;
+$shadowModelScriptContentCodeMirror: none;
+// sql合表右上角按钮
+$bgSqlFormatBtnHover: #fff;
+// end   sql_table.scss
+
+// start add-field.scss
+// 添加计算字段 hover“函数内容”出现的
+$bgFuncTip: #FFF;
+$shadowFuncTip: 0px 0px 10px 0px rgba(0,0,0,0.12), 0px 10px 12px 0px rgba(118,153,222,0.10);
+$fontFuncTip: $fontText;
+$fontFuncTipKey: $fontTextTip;
+$bgFunctionListLiHover: rgba(0, 0, 0, 0.06);
+$bgGroupStringListActive: rgba(0, 0, 0, 0.06);
+$fontNoSearch: $fontRequire;
+$bgBaseLoadingLayer: $bgDialogLayerCover;
+
+// end add-field.scss
+//start table_formatting.scss
+$borderConditionListMatchingAfter: #A3ABB0 rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+$borderBottomNgdialogColorboardUl: rgba(81, 130, 228, 0.15);
+$borderSpPickerContainer: rgba(81, 130, 228, 0.16);
+$shadowNgdialogColorboardMatchingColorsHover: 0px 0px 0px 1px rgba(0,0,0,0.06), 0px 1px 2px 0px rgba(0,0,0,0.20), inset 0px 0px 0px 2px #FFFFFF;
+$shadowNgdialogMessageInitAddHover: 0px 0px 2px 0px rgba(0,0,0,0.12), 0px 2px 4px 0px rgba(118,153,222,0.10);
+$shadowBoxShadow: 0px 0px 4px 0px rgba(0,0,0,0.10), 0px 6px 6px 0px rgba(0,0,0,0.10);
+$bgNgdialogMessageInitAdd: #FFF;
+$bgSpContainer: #FFF;
+$bgKpiColorMatch: #F0F2F3;
+$bgKpiColorClicked: #FFF;
+//end table_formatting.scss
+// start scatter-bubble.scss
+$borderBottomScatterTabHd: $borderTabWrap;
+// 没有找到使用的地方
+$borderNgrsRangeSlider: rgba(0, 0, 0, 0.06);
+$borderNgrsHandler: #A3ABB0;
+$bgBubbleColor: #7ABCE9;
+$bgNgrsJoin: rgba(81, 130, 228, 0.4);
+$bgNgrsRangeSlider: #F9F9FA;
+
+// end scatter-bubble.scss
+
+
+// start admin.scss
+// $bgColTableViewTableFt: $bgFilterWrapDiv;
+// $bgTableBodyTableFtTab: $bgPreviewTitleTab;
+// $shadowTableBodyTableFtTab: $shadowPreviewTitleTab;
+$bgDiagramWrap: $bgMain;
+
+// 模型中的设置
+$bgMergeFieldSelect: $bgMain;
+$shadowMergeFieldSelect: $shadowUploadDataUploadOperateH2Hover;
+// 自定义的下拉菜单
+$borderLeftMergeFieldSelectSsbDownArrow: transparent;
+$borderRightMergeFieldSelectSsbDownArrow: transparent;
+$borderTopMergeFieldSelectSsbDownArrow: #A3ABB0;
+$borderMergeFieldSelectSelectShowBox: $borderCommonDropdownBtn;
+$bgMergeFieldSelectSelectOption: $bgDropdownWrap;
+$shadowMergeFieldSelectSelectOption: $shadowDropdownWrap;
+$bgMergeFieldSelectSoLiHover: $bgDropdownItemHover;
+$fontMergeFieldSelectSoSelected: #5182E4;
+
+/*************左侧用户列表******start******/
+$bgColSideMenu:	$bgCommonList;
+$shadowSideMenu: $shadowCommonList;
+$bgSideMenuListLiActive: $bgCommonListLiActive;
+$shadowSideMenuListLiActive: $shadowCommonLiActive;
+$fontSideMenuListLiActive: $fontCommonLiActive;
+$bgSideMenuListTbNameHover: $bgCommonListLiHover;
+
+// 选中状态（普通用户）
+$bgColSideMenuListLiHover: $bgCommonListLiHover;
+// 选中状态（管理员）
+$bgColSideMenuListLiAdminHover: $bgCommonListLiHover;
+$fontColSideMenuListLiAdminHover: $fontCommonLiActive;
+
+$fontSideMenuListGroupNameHover: $fontCommonLiActive;
+/*************左侧用户列表******start******/
+// 基本信息板块
+$bgUserInfo: $bgUserInfoCommonDiv;
+$shadowUserInfo: $shadowUserInfoCommonDiv;
+
+$bgWorkTablesHasTables: $bgUserInfoCommonDiv;
+$shadowWorkTablesHasTables: $shadowUserInfoCommonDiv;
+// Tab样式
+$borderInfoTabTab: $borderTabWrap;
+$borderInfoTabTabLi: $borderTabItem;
+$borderInfoTabTabLiActive: $borderTabActive;
+$fontInfoTabTabLiActive: $fontTabActive;
+
+$borderSideMenuUserTab: $borderTabWrap;
+$borderSideMenuUserTabLiSpan: $borderTabItem;
+$borderSideMenuUserTabLiAcSpan: $borderTabActive;
+$fontSideMenuUserTabLiAcSpan: $fontTabActive;
+
+//  基本信息、所在分组等、辅助性文字
+$fontEmptyTip: $fontTextTip;
+$fontUserInfoLabel: $fontTextTip;
+$fontInfoBoxDt: $fontTextTip;
+
+//分配工作表
+$shadowSharedWbBoxMenu: 1px 0px 0px 0px rgba(0, 0, 0, 0.1), 2px 0px 0px 0px rgba(0, 0, 0, 0.03);
+$borderRightSharedMenuFolderNameActive: #ECEFF1;
+$bgColCheckHalfAfter: $bgColInputTypeCheckboxHalfChecked;
+
+
+// icon hover
+$bgColBtnGroupBiwHover: $bgColIconHover;
+
+$fontUserInfoResetPwd: $fontUserInfoLabel;
+$fontUserInfoUserinfoDesc: $fontEmptyTip;
+
+$borderWorktbFilterFilterType: $borderSeparateLine;
+/* 两个header 与parse_url bgPreviewPaneQueryKey一样 fontPreviewPaneQueryKey*/
+$bgTablesThTableName: #ECEFF1;
+$fontTablesThTableName: $fontText;
+
+/* 下面为进度条颜色 如：帐号配额 统一用logo背景色 及其 对应0.15 */
+$bgColAccountConfIcon: $bgProgressBarBottom;
+$bgColAccountConfIconSpan: $bgProgressBarTop;
+$bgColAccountConfIconSpanGreen: $bgProgressBarTop;
+$bgColAccountConfIconSpanOrange: $bgProgressBarTop;
+$bgColAccountConfIconSpanRed: $bgProgressBarTop;
+// end admin.scss
+
+// start databse.scss
+// 搜索框
+$bgDatabaseMainSearchInput: transparent;
+$bgDatabaseMainSearchInputFocus: transparent;
+// $borderDatabaseMainSearchInput: #5182e4;
+// $borderDatabaseMainSearchInputFocus: #5182e4;
+$fontDatabaseMainSearchInputDefault: $fontTextTip;
+
+$bgDatabaseInfoItemProgressBottom: $bgColAccountConfIcon;
+$bgDatabaseInfoItemProgressTop: $bgColAccountConfIconSpan;
+$fontDatabaseSearchListTitle: $fontText;
+// 与日历一样
+$bgAddDatabaseFormDateLayer: #FFFFFF;
+$shadowAddDatabaseFormDateLayer: 0px 0px 10px 0px rgba(0,0,0,0.12), 0px 10px 12px 0px rgba(118,153,222,0.10);
+$bgDatabasePanel: $bgMain;
+//个人版添加数据源
+$fontUploadDataPersonalTips: #FFF;
+$bgUploadDataPersonalTips: rgba(0, 0, 0, 0.7);
+$fontUploadDataPersonalTipsA: $fontCrBdp;
+$shadowPersonalAddDataSourceUploadData: 0px 1px 2px 0px rgba(0, 0, 0, 0.1), 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+$bgCreateOpenDataBox: $bgMain;
+$shadowCreateOpenDataBox: none;
+$bgCreateOpenDataBoxBg: rgba(0,0,0,0.06);
+$bgCreateOpenDataBoxColor: #fff;
+
+$shadowCreateOpenDataBoxActive:  0 0 0 2px #5182E4 inset;
+$shadowCreateOpenDataBoxDisable: 0 0 0 2px #A3ABB0 inset;
+$bgCreateOpenDataBoxDisable: #A3ABB0;
+
+$fontCreateOpenDataBoxNoData: $fontTextTip;
+$bgCreateOpenDataBoxNoDataBg: $fontTextTip;
+$fontCreateOpenDataBoxHoverBoxMask: #ffffff;
+$bgCreateOpenDataBoxHoverBoxMask: rgba(0, 0, 0,0.8);
+
+//开发者中心
+$fontDeveloperCenter: $fontText;
+$bgColorDeveloperCenterItem: #fff;
+$borderBottomDeveloperCenterItemsLi: rgba(0, 0, 0, 0.1);
+$fontDeveloperCenterTokenBtn: $fontCrBdp;
+$bgDeveloperCenterTokenBtn: transparent;
+$bgDeveloperCenterYourAccount: transparent;
+$borderDeveloperCenterYourAccount: none;
+$fontDeveloperCenterDocuments: $fontCrBdp;
+$borderDeveloperCenterTokenBtn:none;
+$fontDeveloperCenterPErrorTip: $fontCrHint;
+$fontDeveloperCenterIpError: $fontCrHint;
+$bgDeveloperCenterIpsButton: transparent;
+$borderDeveloperCenterIpsButton: none;
+$fontDeveloperCenterIpListLi: $fontTextTip;
+$fontDeveloperCenterIpListLiHover: $fontTextActive2;
+$fontDeveloperCenterIpListNoIpHover: $fontTextTip;
+$fontDeveloperCenterNoIp: $fontTextTip;
+$fontColMonitor: #3EB27E;
+$fontColLessMoney: $fontCrHint;
+$fontColEndTask: #FFCA63;
+$fontColStopTask: #A3ABB0;
+// 添加数据源按钮
+$fontAddDataSourceButton: #5182E4;
+$borderAddDataSourceButton: #5182E4;
+// end databse.scss
+
+// start worktable-tree.scss 切换工作表时选择工作表浮层
+$fontDbListTableNameHover: $fontTextHover;
+
+$shadowDbListTableNameActiveA: inset 0px 0px 0px 2px #5182E4;
+$bgColorDbListTableNameActiveA:#FFF;
+$bgFolderListDialogDsListLIopen:transparent;
+// 没有找到
+$bgColorFolderListDialogDsListTbNameHover:#f3f5f6;
+// end worktable-tree.scss
+
+// start user-guide.scss 编辑页用户引导
+$bgGuideChartOpacityBg: rgba(81, 130, 228, 0.1);
+$bgGuideTip: $bgDropdownWrap;
+$bgGuideArrow: $bgDropdownWrap;
+$shadowGuideTip: $shadowDropdownWrap;
+$fontGuideInfoTitle: $fontTextActive2;
+$fontUserGuidePreTitle: $fontTextActive2;
+$fontGuideInfoContent: $fontTextActive2;
+$fontGuideInfoContentBlue: $fontTextActive;
+$bgUserGuideArea: $bgColNgdialogContent;
+$fontUserGuideArea: $fontText;
+$fontRedoUploadFile: $fontTextActive;
+$fontUserGuideStepReturnGuidePre: $fontTextActive;
+$fontUserGuideCancelHover: $fontTextActive;
+$fontUserGuideCancel: $fontTextActive;
+$bgTableViewGuideMain: $bgGuideChartOpacityBg;
+$bgTableGuideTipBg: $bgDropdownWrap;
+$bgUserGuideModel: $bgNgDialogOverlay;
+$bgGuideVideo: $bgNgDialogOverlay;
+
+// end user-guide.scss
+
+// start enum.scss
+$bgEnumItemIconHover: $bgColIconHover;
+// end enum.scss
+
+// start enum_order.scss
+// 弹窗背景色的0.75
+$bgEnumItemsWrapMask: $bgDialogLayerCover;
+$colorEnumTip1: rgba(11, 19, 32, 0.38);
+$bgEnumTip1: rgba(11, 19, 32, 0.05);
+// end enum_order.scss
+
+
+// start sidebar.scss
+// 导航条bg
+$bgColBdpHeaderWraper: #F0F2F3;
+//个人版手机端顶部
+$bgColorBdpHeaderWrapper: #fff;
+//个人版member页
+$fontTextPrice: #E45151;
+// logo bg
+$bgColLogo: #5182E4;
+// 导航条选中bg
+$bgColNavItemActive: #FFF;
+// 导航条分隔块bg
+$bgColHdSetSeparated: rgba(81, 130 ,228, 0.2);
+
+// 提示小圆标
+$bgUnwatchedActive: #E45151;
+$bgNavWorkspaceList: transparent;
+$shadowNavWorkspaceList: 0 -1px 0 #DADDDF inset;
+$bgLinearNavWorkspaceList: -180deg, #F5F7F7 100%, #F5F7F7 100%;
+// 与$bgHtmlBody的值一样，除了0.96
+$bgDashSidebar: rgba(232, 235, 237, 0.96);
+$bgDashSidebarDragBtnAfter: $bgDragBtnAfter;
+
+
+// 导航条默认状态的borderCol  设计一般不需要给这个颜色，默认transparent即可
+$borderNavItem: transparent;
+// 导航条选中
+$borderNavItemActive: #5182E4;
+$borderNavWorkspace: rgba(0,0,0,0.1);
+
+// 导航条默认文字
+$fontNavItemName: $fontText;
+// 导航条选中文字
+$fontNavItemNameAc: #5182E4;
+$fontGridsterHeightSmallHzChartTitleText: $fontText;
+$fontWorkspaceNavContent: $fontText;
+$fontActiveWorkspaceNavContent: #5182E4;
+$fontWorkspaceNavContentHover: $fontTextHover;
+// 导航条hover
+$bgNavWrapNavItemHover: rgba(255, 255, 255, 0.6);
+// 导航条shadow
+$shadowBdpHeaderWraper:  0px 0px 6px 0px rgba(0, 0, 0, 0.12), 0px 10px 12px 0px rgba(170, 182, 206, 0.2), inset 0px -1px 0px 0px rgba(255, 255, 255, 0.3);
+$shadowDashSidebar: $shadowCommonList;
+$shadowDashSidebarDragBtnAfter: $shadowDragBtnAfter;
+
+$fontGridsterHeightSmallHzChartTitleText: $fontText;
+// 提示小圆标
+$bgUnwatchedActive: $fontRequire;
+// 使用主体蓝的0.6
+$bgDashSortPlaceholder: $bgDragSortTable;
+// end sidebar.scss
+
+// start security.scss
+$shadowSecurityTabHeader: $shadowTabHeader;
+$borderSecurityTabHeaderULiActive: $borderBottomTabHeaderItemActive;
+// end security.scss
+
+// start workspace.scss
+$shadowWorkspaceTab: $shadowTabHeader;
+$borderWorkspaceTabLi: transparent;
+$borderWorkspaceTabLiActive: $borderBottomTabHeaderItemActive;
+$fontOperateLogInfoOperateTime: $fontText;
+$fontOperateLogInfoOperateName: $fontText;
+$fontOperateLogInfoOperateContent: $fontText;
+$fontLogPagesPageNumber: $fontTextTip;
+$shadowOperateLogList: 0 -1px 0 0 $borderSeparateLine inset;
+// end workspace.scss
+//start plotLine.scss
+$fontPlotLineAddLineBtn: #5182e4;
+$bgWarnItemListLiActive: rgba(0, 0, 0, 0.06);
+
+//end plotLinr.scss
+
+
+
+// start user-manage.scss
+$shadowBottomTooltipGroupItem: $shadowChartDataInfo;
+$shadowTooltipGroupItemLast: none;
+$bgFilterGroupList: $bgNgDialogBgBlock;
+// end user-manage.scss
+//start template.scss
+$shadowColTemplateConfigTemplateList: $shadowDashSidebar;
+$shadowTemplateHomeBdRt: -1px 0px 0px 0px rgba(0, 0, 0, 0.15), -2px 0px 0px 0px rgba(0, 0, 0, 0.03);
+$borderTemplateConfigTemplateList: #E8EBED;
+$borderTemplateConfigTemplateListHead: $borderTabWrap;
+$shadowTemplateConfigfiltersFieldsList: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset;
+$fontRuleEditBlockH5A: $fontTextActive;
+$shadowTemplateconfigContentDashList: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.1);
+$bgTemplateConfigContentDLLiHover: none;
+$bgImgTemplateConfigContentDLLiActive: none;
+$shadowTemplateConfigContentDLLiActive: none;
+
+//end template.scss
+
+// start angular.popover.scss
+// 一般来说，没有人用到用tooltip-arrow,但框架中有默认的，
+// 为了保险,取色为其模块背景色
+$shadowToolTip: 0px 0px 6px 0px rgba(0,0,0,0.10), 0px 10px 12px 0px rgba(0,0,0,0.10);
+$borderTooltipArrow: transparent;
+$borderTooltipTopTooltipArrow: $bgDropdownWrap;
+$borderTooltipTopLeftTooltipArrow: $bgDropdownWrap;
+$borderTooltipTopRightTooltipArrow: $bgDropdownWrap;
+$borderTooltipRightTooltipArrow: $bgDropdownWrap;
+$borderTooltipLeftTooltipArrow: $bgDropdownWrap;
+$borderTooltipBottomTooltipArrow: $bgDropdownWrap;
+$borderTooltipBottomLeftTooltipArrow: $bgDropdownWrap;
+$borderTooltipBottomRightTooltipArrow: $bgDropdownWrap;
+// end angular.popover.scss
+
+// start custom-yoy.scss
+$bgSteppy: $bgChartMain;
+$bgSteppyFocus: $bgDropdownWrap;
+$shadowSteppy: $shadowDropdownWrap;
+$shadowSteppyFocus: $shadowDropdownWrapSecondLayer;
+// end custom-yoy.scss
+
+// start global-filter.scss
+$bgGlobalFilterRightHandlerWebkit: -webkit-linear-gradient(left, rgba(232,235,237,0.00) 0%, #E8EBED 30%);
+$bgGlobalFilterRightHandlerO: -o-linear-gradient(left, rgba(232,235,237,0.00) 0%, #E8EBED 30%);
+$bgGlobalFilterRightHandler: linear-gradient(to right, rgba(232,235,237,0.00) 0%, #E8EBED 30%);
+// 全局筛选器设置弹层
+$shadowFilterConfigDefault: 0 -1px 1px rgba(81,130,228,0.15);
+// end global-filter.scss
+
+// start upload.scss
+$bgUploadProgress: rgba(255,255,255,.06);
+$bgUploadProgressA: rgba(81,130,228,1) ;
+
+// end upload.scss
+
+
+// start parse_url.scss
+$bgParseUrlViewActionPane: $bgMain;
+$bgSelectParseParamField: $bgNgDialogBgBlock;
+$shadowSelectParseParamField: $shadowNgDialogBgBlock;
+$bgMergeFieldAction: $bgMain;
+$fontMergeFieldActionReselectFields: $fontTextActive;
+
+// 归并框框里文字的颜色
+$fontMergeFieldActionMergeCell: #fff;
+// 归并字段的框框
+$borderMergeFieldActionMergeColumn: rgba(81,130,228,0.6);
+$bgMergeFieldActionMergeCell: #5182E4;
+$borderColMergeFieldActionMergeCellTriangle: $bgMergeFieldActionMergeCell $bgMergeFieldActionMergeCell transparent transparent;
+$borderColMergeFieldActionMergeCellTriangleAfter: $bgMergeFieldAction $bgMergeFieldAction transparent transparent;
+$bgMergeFieldActionEmptyCell: $bgMergeFieldActionMergeCell;
+
+// 表格两个header
+$fontPreviewPaneQueryKey: $fontTablesThTableName;
+$bgPreviewPaneQueryKey: $bgTablesThTableName;
+$fontPreviewPaneGroupType: #fff;
+$bgPreviewPaneGroupType: rgba(81,129,228,0.60);
+$bgPreviewPaneGroupTypeQueryKey: #5182E4;
+// end parse_url.scss
+
+
+// start gis.scss
+$bgGisMain: $bgChartMain;
+$bgGisLayers: transparent;
+$bgGisEditDropAbleHint: rgba(0,0,0,0.06);
+$bgLeftGisLayersLiHover: rgba(0,0,0,0.06);
+$borderGisEditDropAbleHint: rgba(163, 171, 176, 0.4);
+$fontGisEditDropAbleHint: $fontTextTip;
+$bgGisEditUiHoverDropAbleHint: rgba(0,0,0,0.1);
+$borderColGisEditUiHoverDropAbleHint: rgba(163, 171, 176, 0.6);
+$shadowGisLayers: 2px 0px 3px 0px rgba(0,0,0,0.10), 1px 0px 1px 0px rgba(0,0,0,0.10);
+$borderLeftGisLayersLi: transparent;
+$borderLatAxis: $borderChartArgsRow;
+$fontLatAxisCorrectLocation: $fontTextActive;
+$shadowGisSettingsChartTypeIcon: none;
+$shadowGisSettingsHoverChartTypeIcon: none;
+$shadowGisSettingsActiveChartTypeIcon: none;
+$borderGisSettingsSymbolType: transparent;
+$borderGisSettingsSymbolTypeActive: #5182e4;
+$bgGisSettingsSymbolTypeActive: transparent;
+$bgGisSettingsSymbolTypeHover: transparent;
+$bgGisTooltip: #FFF;
+$shadowGisTooltip: 0px 0px 6px 0px rgba(0,0,0,0.10), 0px 10px 12px 0px rgba(0,0,0,0.10);
+$bgGisLayersMoreDropDown: $bgDropdownWrap;
+$shadowGisLayersMoreDropDown: $shadowDropdownWrap;
+$bgGisLayersMoreDropDownActionHover: $bgDropdownItemHover;
+$bgGisLegendDom: rgba(255, 255, 255, 0.94);
+$shadowGisLegendDom: 0px 0px 6px 0px rgba(0, 0, 0, 0.1), 0px 12px 24px 0px rgba(0, 0, 0, 0.3);
+$borderGisLegendDomUl: 1px solid rgba(0, 0, 0, .06);
+$fontGisLayerTitle: #000;
+$fontGisLegendItem: $fontText;
+$fontGisLegendIcon: #A3ABB0;
+// end gis.scss
+
+
+
+
+//start social-share.scss
+$bgShareWechatPop: $bgMain;
+$bgCancelSharePopup: $bgMain;
+
+$fontShareTabHeaderActive: $fontTextHover;
+$fontNgdialogWillShareTextarea: $fontText;
+
+
+
+
+//end social-share.scss
+
+// start fullscreen.ui.scss
+$fontFullScreenText: $fontText;
+$bgFullScreenModal: $bgChartMain;
+$borderFullScreen: $borderrderBdpTableNormal;
+$fontFullScreenActive: $fontTextActive2;
+$fontFullScreenStatusInput : $fontText;
+$bgFullScreenNav: $bgHtmlBody;
+$fontFullScreenNav: $fontText;
+$shadowFullScreenNav: none;
+
+$bgFullScreenSankeyTooltip: $bgDropdownWrap;
+$bgFullScreenList: $bgDropdownWrap;
+$bgFullScreenListLiAHover: $bgDropdownItemHover;
+$bgFullScreenListLiAActive: $bgDropdownItemHover;
+$borderTopFullscreenGranularity: 1px solid rgba(0, 0, 0, 0.06);
+$shadowFullScreenName:  0 0 0 0 transparent;
+$fontFullScreenHoverText: $fontTextActive2;
+$fontFullScreenDescription: $fontText;
+
+// end fullscreen.ui.scss
+// start personal-setting.scss
+$bgColPasswordHint: $bgDropdownWrap;
+// 密码强度进度条
+$bgColPasswordHintBar: rgba(0, 0, 0, 0.06);
+$bgColPasswordHintBWeakerAfter: rgba(207, 72, 52, 1);
+$bgColPasswordHintBWeakAfter: #EECF3A;
+$bgColPasswordHintBStrongAfter: #339A3C;
+// end personal-setting.scss
+
+
+
+//account setting start
+$accountSettingbackground :$bgDropdownWrap;
+$accountSettingboxshadow: $shadowDropdownWrap;
+$bgAccountSettingPHover: #f3F5F6;
+$accountSettingUlLiNotLastChildborderbottom: $borderSeparateLine;
+$skinRectangleBlackHover: rgba(81, 130, 228, 0.6);
+$shadowRectangleBlackHover: 0px 0px 0 2px #8BB1FF inset,0 0 0 2px rgba(81,130,228,.15);
+$borderLeftAccountInfoModelAccountTop: transparent;
+$borderRightAccountInfoModelAccountTop: transparent;
+$borderBottomAccountInfoModelAccountTop: #FFFFFF;
+$shadowThemeActive: 0px 0px 0 2px #8BB1FF inset,0 0 0 2px rgba(81,130,228,.15);
+$opacityAccountSelectBdpIconHover: 0.6;
+$opacityIcoAccountPersonalinfo: 1;
+$opacitySelectTriangleHover: 1;
+$opacitySelectTriangleHoverBdpIcon: 0.6;
+$bgLabelUpdateHover: #f3f5f6;
+$opacityIcoAccountPersonalinfo: 1;
+//end
+
+// start share-index.scss
+// 分享模块bg
+$bgShareBlock: #F3F5F6;
+$bgShareCommentWrap:  $bgMain;
+$fontShareHighLight: $fontTextActive;
+$fontShareCommentMainUserName: $fontTextActive;
+$fontShareCommentMainCtime: $fontTextTip;
+$fontShareReplyA: $fontTextActive;
+$borderBottomShareCommentListLi: $borderSeparateLine;
+
+// $borderColShareNameAfter: rgba(255, 255, 255, 0.6);
+$bgColSharePageLoading: transparent;
+$shadowShareDashTitleWrapViewHeader: none;
+$bgShareCommentTextareaHover: none;
+$fontShareFavorCount: $fontTextTip;
+$borderBottomShareCommentListLast: none;
+$fontShareCommentBlockTip: $fontTextTip;
+// $shadowShareLogo: 0 1px 0 0 rgba(0, 0, 0, .20);
+$fontMobileModeItemChart: rgba(0, 0, 0, 0);
+// end share-index.scss
+
+//accountInfoModel 修改信息模态框
+
+$accountInfoModelbackground: $bgDropdownWrap;
+$accountInfoModelboxshadow: $shadowDropdownWrap;
+$accountInfoModelNameBorderBottom: $borderSeparateLine;
+$accountInfoModelinfo:$borderSeparateLine;
+$verifybtnbackground:#F5F7F8;
+$verifybtnboxshadowOne:0px 1px 2px 0px rgba(0,0,0,0.10), inset 0px -1px 0px 0px rgba(0,0,0,0.10), inset 0px 0px 0px 1px rgba(0,0,0,0.15), inset 0px 2px 0px 0px rgba(255,255,255,0.50);
+$fontVerifybtn: $fontText;
+$fontVerifybtnHover: $fontTextHover;
+$verifybtnbackgroundHover: #fff;
+$verifybtnboxshadowOneHover: 0px 2px 4px 0px rgba(0, 0, 0, 0.1), inset 0px -1px 0px 0px rgba(0, 0, 0, 0.10), inset 0px 0px 0px 1px rgba(0, 0, 0, 0.15), inset 0px 2px 0px 0px rgba(255, 255, 255, 0.50);
+//end
+// warning.scss 以下内容需要各自取值，不能用变量赋值
+$bgWarnListLiActive: #FFF;
+$bgWarnListLiHover: $bgDropdownItemHover;
+$bgWarnListLiActiveHover: rgba(255,255,255,.7);
+$fontWarnListLiActive: $fontTextHover;
+$warnListGoUrl: '../../../img/arrow_right_big.png';
+
+$bgWarnList: #F0F2F3;
+$shadowWarnList: $shadowWorkTablesHasTables;
+$fontWarnLoc: $fontTextTip;
+$shadowWarnListText: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.12);
+$bgChartWarnSwitch: rgba(163,170,175,0.32);
+$bgChartWarnSwitchOn: rgba(81,129,228,0.40);
+$bgChartWarnSwitchBtn: #A3ABB0;
+$bgChartWarnSwitchOnBtn: #5182E4;
+$shadowChartWarnSwitchBtn: 0px 1px 1px 0px rgba(0,0,0,0.03);
+$shadowChartWarnSwitchOnBtn: 0px 1px 1px 0px rgba(0,0,0,0.10), 0px 2px 3px 0px rgba(81,129,228,0.10);
+
+// warning.scss
+
+// start database-baidu-search.scss
+$bgBdBaiDuSearchWrapDBSTI: #F3F5F6;
+$bgBdBaiDuSearchWrapDBSTIHover: rgba(81, 130, 228, 0.1);
+$bgBdBaiDuSearchWrapDbTimeSelect: rgba(81, 130, 228, 0.1);
+$shadowBdBaiDuSearchWrapDbTimeSelect: 0 0 0 1px #5182E4;
+
+$opacityFormControlDisabled: 1;
+$shadowFormControlDisabled: none;
+// end database-baidu-search.scss
+
+//start author_manage.scss
+$bgContentBox:#fff;
+$shadowContentBox:0 0 6px 0 rgba(0,0,0,.06),0 10px 12px 0 rgba(170,182,206,.15);
+//end author_manage.scss
+
+
+
+//start tb-filter.scss
+$bgExpressionWrap: $bgColorWrap;
+$shadowExpressionWrap: 0px 2px 4px 0px rgba(0,0,0,0.10), 0px 10px 24px 0px rgba(0,0,0,0.06);
+$bgExpressionWrapLt: $bgColorWrap;
+$shadowExpressionWrapLt: 1px 0px 0px 0px rgba(0,0,0,0.10), 2px 0px 0px 0px rgba(0,0,0,0.10);
+$fontExpressionWrapTab:$fontText;
+$shadowExpressionWrapTab:$shadowTab;
+$borderColorExpressionWrapTabLiActive:#5182E4;
+$bgColorExpressionWrapTbNameActive:rgba(81,130,228,0.1);
+$colorExpressionWrapTbNameActive:$fontTextHover;
+$bgExpressionWrapRt:$bgColorWrap;
+$shadowExpressionWrapRt:$shadowBox;
+
+$bgExpressionWrapRtLine:$bgColorDeep;
+$shadowExpressionWrapRtLine:none;
+$shadowExpressionWrapFt: 0 1px 0 0 rgba(81, 130, 228, 0.15) inset;
+//end tb-filter.scss
+
+// model.scss
+$borderBottomTrainModelTag: #e8ebed;
+// end model.scss
+
+// start pay.scss
+$bgColMemIntrMemberIntrFree: rgba(81, 130, 228, 0.15);
+$bgColMemIntrMemberIntrSilver: rgba(81, 130, 228, 0.5);
+$bgColMemIntrMemberIntrGold: rgba(81, 130, 228, 1);
+$bgMemberIntrLine: rgba(0, 0, 0, 0.06);
+$shadowMemUpgConUpgradeOpenItem: 0 0 0 1px rgba(0,0,0,0.06) inset;
+$shadowMemUpgConUpgradeOpenItemSelected: 0 0 0 2px rgba(81, 130, 228, 1) inset;
+$colorUpgradeDetailPrice: #E45151;
+$colorOpenItemOriginPrice: #E45151;
+$colorOpenItemDiscount: #FFF;
+$bgColOpenItemDiscount2: #9F2F2F;
+$bgColOpenItemDiscount3: #E45151;
+$bgColOpenItemDiscount: #E45151;
+$bgColMemberIntroduction: #F6F6F6;
+$bgMemberIntroductionItem: #FFF;
+$shadowMemberIntroductionItem: 0px 0px 5px 0px rgba(0,0,0,0.08), 0px 8px 10px 0px rgba(170,182,206,0.10), inset 0px -1px 0px 0px rgba(255,255,255,0.30);
+
+$bgMemberFooterWrap: #F3F5F6;
+$shadowMemberFooterWrap: 0px 1px 0px 0px rgba(0,0,0,0.20) inset;
+$fontMemberUpgradeBtn: #5182E4;
+$shadowMemberUpgradeBtn: 0px 0px 0px 1px #5182E4;
+// 升级成功弹窗
+$bgUpgradeSuccessBannerGold: url('../icons/upgrade_gold.jpg');
+$bgUpgradeSuccessBannerSilver: url('../icons/upgrade_silver.jpg');
+// end pay.scss
+
+//start merge_table.scss
+$borderSideMenuTbNameChoosed: #5182E4;
+$bgMergeWorkTableFt: $bgFilterWrapDiv;
+$bgMergeWorkTabltFtTab: $bgPreviewTitleTab;
+$shadowMergeWorkTableFtTab: $shadowPreviewTitleTab;
+//end merge_table.scss
+
+
+//start database_global.scss  数据源
+$bgColorCapacityAfter:rgba(81, 130, 228, 0.3);
+$bgColorDatabaseViewStatisticsLayerBox:$bgMain;
+$shaadowStatisticsLayerLiActiveBox: 0 0 0 3px rgba(81,130,228,0.1), 0 0 0 2px #5182E4 inset;
+$fontColorStatisticsLayerNumber: rgba(10,18,32,0.87);
+$fontColorDatabaseViewList: rgba(10,18,32,0.87);
+$bgColorDatabaseMain: #f3f5f6;
+$colorDatabaseTableTagLabel: $fontText;
+$bgColorDatabaseTableTr: #F3F4F5;
+$bgColorDatabaseDesc:$bgMain;
+$bgColorDatabaseSetTabLiActive: #fff;
+$bgColorDatabaseSetTabBody: #fff;
+$colorChooseWorktableSpan: #5182E4;
+$bgDBNewDddGuide: #fff;
+$shadowDBNewDddGuide: 0px 0px 4px 0px rgba(0,0,0,0.10), 0px 6px 6px 0px rgba(0,0,0,0.10);
+$bgColorDatabaseTableThead: #ECEFF1;
+$bgColorAuthorizeLoading: #d5d9dc;
+//end data-base.scss
+
+//start database_create.scss  数据源创建
+$bgColorCreateViewTab: $borderBottomColorTabActive;
+$colorCreateViewTab: #fff;
+$bgColorCreateViewTabLiAfter: rgba(81,130,228,0.4);
+$bgColorCreteDbFrom: #F3F5F6;
+$bgColorCreateViewFormLayer: $bgMain;
+$shadwoCreateViewFormLayer: 4px 2px 4px 0px rgba(0,0,0,0.06);
+$colorFormLayerRowBtn: #5182E4;
+$bgColorWorktableListLiHover: rgba(232,235,237,0.5);
+$boderBottomColorDbWorktableList: rgba(81,130,228,0.15);
+$bgColorAuthorize:rgba(81,130,228,0.15);
+//end database_create.scss
+
+//start database_list.scss 数据源列表
+$fontColorDatabaseListSlogan: #fff;
+$bgColorNavDatabaseList: rgba(240,242,243,1);
+$bgColorDataBaseListItem: $fontColorDatabaseListSlogan;
+$fontColorDatabaseListBlock: rgba(10,18,32,0.87);
+$bgColorDatabaseListResultBar: #fff;
+$shadowDatabaseListResultBarItem: 0px 1px 0px 0px rgba(0,0,0,0.1);
+$bgColorDatabaseListResultBarItemHover: rgba(232,235,237,0.5);
+$fontDatabaseListResultBarDbName: #000;
+$shadowDatabaseListBlockPic: 0px 1px 0px 0px rgba(0,0,0,0.1);
+$shadowDatabaseTable:none;
+$fontColorDatabaseListViewAll: rgba(81,130,228,1);
+$bgColorDatabaseListBlockHover: rgba(255,255,255,0.96);
+$bgColorDatabaseListBtnMore:$bgColorNavDatabaseList;
+$fontColorDatabaseListBtnMore: $fontText;
+$imageDatabaseListBlockHover: url('/static/images/hover-add-light.png');
+$bgColorDatabaseListNavMore: $bgDropdownWrap;
+$fontColorDatabaseListNavMore: #5182E4;
+$bgColorDatabaseListMoreItemHover: $bgDropdownItemHover;
+$shadowDatabaseListMoreBar: $shadowDropdownWrap;
+$borderDatabaseTable: 1px solid #E8EBED;
+$shadowStatisticsLayerHoverBox: 0 0 0 2px rgba(81,130,228,0.6) inset;
+$shadowDatabaseListSearchResult: 0px 0px 4px 0px rgba(0,0,0,0.10), 0px 6px 6px 0px rgba(0,0,0,0.1);
+
+//end database_list.scss
+
+// start database_guide.scss 数据源引导
+$bgColorDatabaseGuideTip: #F0F2F3;
+$bgColorDatabaseGuideLeftList: #F2F4F5;
+$fontColorGuideTitle: #F0F2F3;
+$bgColorGuideLayer: rgba(213, 217, 220, 0.72);
+$dbGuideBox: #FFF;
+// end database_guide.scss
+
+//start database_sync_client.scss 数据源同步宝
+
+$fontColorDatabaseSyncClient: #000;
+
+
+
+
+
+/*******   新版用户引导开始   *******/
+// 引导首页
+$rgba54: $fontText;
+$bgTemplateGuidePage: #E8EBED;
+$bgUserGuideNav: #fff;  //导航的背景颜色
+$fontGuideHelpText: #5182E4; //帮助中心文字的颜色
+$fontSelectTemplateGuideTips: $fontNaNTips;///NAN那个公共类
+$shadowSelectTemplateTypeWrap: 0 2px 4px 0 rgba(0,0,0,.1),0 16px 24px 0 rgba(170,182,206,.36);  //选择模板类型的背景阴影
+$shadowTemplateTypeList: 0 1px 0 0 rgba(0,0,0,.1);
+$shadowTemplateTypeItem: 0 1px 1px 0 rgba(0,0,0,.1);
+$shadowTemplateTypeItemHover: 0 0 10px 0 rgba(0,0,0,.12),0 10px 12px 0 rgba(118,153,222,.1);
+$fontGuideTemplateHover: $fontTextHover;
+$bgSelectTemplateTypeWrap: #fff;
+// 公共背景
+$bgGuideBgSee: rgba(213,217,220,0.72);//这个应该是公共的
+$bgGuideBgUnSee: rgba(213,217,220,1);//这个应该是公共的
+// 我知道了按钮
+$fontIKnowButton: #5182E4;
+// 公共Tootips
+$bgGuideTootip: #fff;
+$shadowGuideTootip: 0 0 6px 0 rgba(0,0,0,0.1), 0 10px 12px 0 rgba(170,182,206,0.36);
+$borderGuideTootipTriangle: solid 7px transparent;
+$borderGuideTootipTriangleActive: #fff;
+// 引导步骤弹窗
+$bgGuideStepCircle: #5182E4;
+$fontGuideStepCircle: #fff;
+$bgGuideStepCircleUnOk: #96b4ef;
+$opacityGuideStepCircleUnOk: 0.3;
+$bgGuideStepLine: rgba(81,130,228,0.3);
+// 怎么使用
+$borderTipsLeft: dashed 2px #5182E4;
+$bgGuideNavTipsCircle: #5182E4;
+$fontGuideNavTipsCircle: #fff;
+$borderGuideActionCustom: solid 2px #5182E4;
+$fontGuideActionCustom: #5182E4;
+// 退出引导
+$fontQuitUserGuideButton: #5182E4;
+$fontQuitUserGuideTip: $fontTextTip;
+/*******   新版用户引导结束   *******/
+
+/******** 新版页面上传样式开始 *******/
+// 上传步骤
+$opcityPageUploadWrapStep: 0.3;
+$opcityPageUploadWrapStepActive: 1;
+$bgUploadStepCircle: #5182E4;
+$fontUploadStepCircle: #fff;
+// 上传总体用白色框
+$bgPageUploadNormalContent: $bgBdpInfoBox;
+$shadowPageUploadNormalContent: $shadowBdpInfoBox;
+// 上传拖拽区域框
+$borderUploadWrap: #5182E4;
+$fontUploadWrapA: #5182E4;
+$fontProgressNumber: #fff;
+// 上传框内的提示文本颜色
+$fontUploadWarpUploadTips: $fontNaNTips;
+// 第一步表格示例上的第几列的表头
+$fontTipsHeadLi: $fontPreviewPaneGroupType;
+$bgTipsHeadLi: $bgDragSortTable;
+$borderTipsHeadLiLi: #fff;
+// 预览界面选择表头的表格样式
+$borderSelectTheadTb: #DADDDF;
+$bgselectTheadTbTrHoverTd: rgba(0, 0, 0, 0.1);
+$bgSelectTheadTbTipText: #fff;
+$borderSelectTheadTbTipTextTriangle: $borderTabItem;
+$borderLeftSelectTheadTbTipTextTriangle: #fff;
+$fontHoverTipText: rgba(0,0,0,0.7);
+// 预览表头中选中的表头的样式
+$bgselectTheadTbTrActiveTd: rgba(81, 130, 228, 0.15);
+$bgSelectTheadTbTrActiveTipText: rgba(81,129,228,0.60);
+$fontSelectTheadTbTrActiveTipText: rgba(0,0,0,0.7);
+$borderSelectTheadTbAcitiveTipTextTriangle: $borderTabItem;
+$borderLeftSelectTheadTbAcitiveTipTextTriangle: rgba(81,129,228,0.60);
+// 预览表头中不要的部分及其Hover效果
+$opcityabandon: 0.3;
+$opcityabandonHover: 1;
+// 上传完成的table-list
+$shadowCreatCompleteStepHeader: 1px 0 0 0 rgba(0,0,0,0.15), 2px 0 0 0 rgba(0,0,0,0.03);
+$fontCreatCompleteTableName: $fontText;
+$opcityCreatCompleteExcelIcon: 0.6;
+$fontCreatCompleteTableNameHover: $fontTextHover;
+$opcityCreatCompleteExcelIconHover: 1;
+$bgCeatCompleteItemActive: rgba(0,0,0,0.06);
+// 进度条样式
+$bgUploadStatusProgressWarp: rgba(0,0,0,0.1);
+$fontUploadStatusProgressWarp: $fontNavItemNameAc;
+$bgUploadStatusProgressBar: $bgMergeFieldActionMergeCell;
+// 拖拉操作可接受和拒绝时拖拽区域颜色相应
+$bgUploadStatusProgressBarAccept: rgba(81,130,228,0.15);
+$bgUploadStatusProgressBarReject: rgba(238, 75, 75,0.1);
+$borderUploadStatusProgressBarReject: rgb(218, 73, 73);
+// 调整表头的新表头
+$shadowNewTheadFildTitle: inset 0 -1px 0 0 rgba(81,130,228,0.6);
+$fontnewTheadFieldEmptyTitle: $fontNaNTips;
+// 预览页的Tab
+$borderPreviewTabTansparent: transparent;
+$borderPreviewTabColor: #DADDDF;
+$fontPreviewTabColor: $fontText;
+$bgPreviewTabContent: #fff;
+$borderPreviewTabColorActive: #DADDDF;
+$bgPreviewTabContentActive: #ECEFF1;
+$fontPreviewTabColorActive: #5182E4;
+$bgTabListWrapShadow: none;
+$shadowTabListWrapShadow: 0 -4px 20px 0 rgba(236,239,241,0.6) inset;
+$shadowTabListWrap: 0 -1px 0 0 $borderPreviewTabColorActive inset;
+// 底部footer
+$bgViewFooter: $bgColViewHeader;
+$shadowViewFooter: 0px 0px 6px 0px rgba(0, 0, 0, 0.10), 0px -10px 12px 0px rgba(170, 182, 206, 0.20), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.30);
+$fontViewFooterNextStep: #fff;
+$bgViewFooterNextStep: #5182E4;
+$fontViewFooterPreStep: #5182E4;
+/******** 新版页面上传样式结束 *******/
+
+// 图表模板
+$shadowRightChartTplRule: 1px 0px 0px 0px rgba(0, 0, 0, 0.1), 2px 0px 0px 0px rgba(0, 0, 0, 0.03);
+$bgChartTplRule: #FFF;
+$shadowChartTplRule: 0px 0px 6px 0px rgba(0, 0, 0, 0.06), 0px 10px 12px 0px rgba(170, 182, 206, 0.15);
+$fontNoPublish: #EFCE35;
+$fontPublished: #80D169;
+$borderTplList: 1px dashed rgba(255,255,255,0.3);
+$borderNoteList: rgba(0, 0, 0, 0.1);
+
+/********新版个人版上线提示  start ********/
+// 朦层背景
+$bgNewBroadcastBg: rgba(213,217,220,0.72);
+// 顶部背景及标题
+$bgNewBroadcast: url('/static/images/new_personal_broadcast.png') top center no-repeat;
+$fontNewBroadcast: #fff;
+// 关闭按钮
+$opacityNewBroadcastBtnClose: 0.6;
+$opacityNewBroadcastBtnCloseHover: 1;
+// 内容区
+$fontNewBroadcastTitle: #fff;
+$fontNewBroadcastInfo: #fff;
+$fontNewBroadcastInfoTitle: #4487EA;
+$fontNewBroadcastInfoContent: $fontTextActive2;
+$opacityNewBroadcastInfoContent: 0.6;
+// 了解更多按钮
+$fontNewBroadcastBtnLearnMore: #fff;
+$bgNewBroadcastBtnLearnMore: #5182E4;
+$bgNewBroadcastBtnLearnMoreHover: #366fdc;
+/********新版个人版上线提示  end ********/
+
+
+/********新版机器学习  start ********/
+$mlShadowFooter: 0px 0px 6px 0px rgba(0,0,0,0.12), 0px 10px 12px 0px rgba(118,153,222,0.10);
+$mlInfoBoardBG: #FFFFFF;
+$mlIconPlus: url(../icons/ico_plus1_white.png?__sprite) 0 0 no-repeat;
+$mlHightchartsGridStroke: #000;
+$mlHightchartsGridOpacity: 0.12;
+
+$mlSelectionBackground: rgba(255,255,255,0.6);
+$mlSelectionBackgroundHover: rgba(255,255,255,1);
+$mlSelectionShadowHover: 0px 0px 10px 0px rgba(0,0,0,0.12), 0px 10px 12px 0px rgba(118,153,222,0.10);
+
+$mlShadowBox: none;
+$mlDialogShadow: 0 0 6px 0 rgba(0,0,0,0.06), 0 10px 12px 0 rgba(118,153,222,0.10);
+
+$tableHeaderBGC: #CDD8EE;
+$tableColumnMaskBGC: rgba(232,235,237,0.85);
+$tableColumnHeadBGC: rgba(199,214,245, 1);
+
+$mlTshapHeaderShadow: 0px 0px 6px 0px rgba(0,0,0,0.06), 0px 10px 12px 0px rgba(118,153,222,0.10);
+$mlTableCapLabelBGC: #4F98E6;
+$mlTableCapFeatureBGC: #5F67CE;
+$mlCenterCardShadow: 0px 0px 6px 0px rgba(0,0,0,0.06), 0px 10px 12px 0px rgba(118,153,222,0.10);
+
+$mlFilterTagBGC: #FFF;
+$mlFormulaBoxBGC: rgba(97,183,190,0.10);
+$mlFormulaBoxBDC: rgba(12,131,140,0.30);
+$mlFormulaTermColor: #0C838C;
+
+$mlModelStatusBGC: rgba(211,226,255,0.1);
+$mlModelStatusBorder: 1px rgba(0,0,0,0.06) solid;
+$mlMatrixHeaderBGC: #ECEFF1;
+$mlMatrixIdLineColor: rgba(0,0,0,0.12);
+$mlMatrixDiagonalColor: #6BD3DB;
+$mlMatrixUnexpectedColor: rgba(85, 160, 240, .40);
+$mlMatrixNormalColor: rgba(85, 160, 240, .15);
+$mlMatrixCellBorderColor: #B3B3B3;
+$mlMatrixFixedColumnBGC: #F7F8F9;
+$mlWelcomeCoolBrain: url(../../../images/ml/cool-brain-light.png);
+
+$mlSplitLineColor: rgba(0,0,0,0.12);
+
+$columnHeadIgnoreBGC: #E1E4E9;
+$mlVideoFadeoutShadow: linear-gradient(90deg, #FFFFFF 0%, rgba(255,255,255,0.00) 8%, rgba(255,255,255,0.00) 92%, #FFFFFF 99%);
+/********新版机器学习  end ********/
+
+
+/********新消息中心  start ********/
+// 消息列表未读小红点
+$fontUnReadLen: #fff;
+$bgUnReadLen: #E54F4F;
+// 消息列表
+$bgNoticeTab: #F0F2F3;
+$bgNoticeList: #F0F2F3;
+$shadowNoticeList: $shadowUserInfoCommonDiv;
+$bgNoticeListItemActiveHover: rgba(255,255,255,0.5);
+$fontNoticeListItemHover: #F5F7F7;
+$fontNoticeListItemActive: $fontTextActive2;
+$bgNoticeListItemActive: #fff;
+$shadowNoticeListItemALast: none;
+$shadowNoticeListItem: inset 0 -1px 0 0 rgba(0,0,0,0.12);
+
+$shadowNoticePicItem: $shadowNoticeListItemALast;
+$opacityNoticePicItem: 0.7;
+$opacityNoticePicItemHover: 1;
+$shadowNoticePicItemHover: 0 0 6px 0 rgba(0,0,0,0.1), 0 6px 12px 0 rgba(0,0,0,0.1), inset 0 0 0 3px #5182E4;
+// 消息里A标签
+$fontNotcieHtmlA: $fontTextLink;
+
+$bgImgNoNotice: url('/static/images/message_empty_white.svg');
+/********新消息中心  end ********/
+
+
+//个人版会员宣传页
+$colorCharacterIntro: $fontTextTip;
+$bgCharacterIntro: #fff;
+
+//个人版分享页
+$colorPersonalUserDate: rgba(0, 0, 0, .4);
+
+//工作表类型转换 弹层第二步 框图颜色
+$transformTbCubeColor: rgba(0,0,0,0.82);
+
+//navigator引导
+$borderColorNavigatorGuide: rgba(213, 217, 220, 0.7);
+$bgNavigatorGuideTooltip: rgba(255, 255, 255, 1);
+$shadowNavigatorGuideTooltipShadow: 0px 0px 6px 0px rgba(0,0,0,0.10), 0px 10px 12px 0px rgba(170,182,206,0.36);
+$colorNavigatorGuideTooltip: rgba(0, 0, 0, 0.54);
+
+//表格高级设置tip层
+$coloradvSortRuleTitle: rgba(10,18,32, 0.38);
+$colorAdvSortField: rgba(11, 25, 43, 0.87);
+$colorAdvSortOrderType: rgba(10,18,32, 0.64);
+
+//批量修改密码
+$fontPwdTplUpload: #FFF;
+
+//弹窗的 list，hover样式
+$bgDialogHoverList: #fff;
+$fontDialogTip: rgba(10,18,32,0.38);
+$borderBottomLine: 1px solid rgba(81, 130, 228, 0.15);

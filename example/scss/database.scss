@@ -1,0 +1,1141 @@
+
+.db-view-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 50;
+}
+
+.db-view-header h2 {
+    margin-left: 24px;
+}
+.db-view-header .view-header .btn-layer{
+    right: 24px;
+
+}
+
+#database-operate{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+/* TIP: view-header依赖; top为88 */
+.database-main{
+    position: relative;
+    padding-top: 64px;
+    height: 100%;
+}
+.database-main .database-content {
+    position: relative;
+    height: 100%;
+    overflow-y: auto;
+    padding-bottom: 30px;
+}
+/* ****** 数据源短信预警 ****** start ****** */
+.database-main .database-warn{
+    position: absolute;
+    left: 16px;
+    height: 48px;
+    display: inline-block;
+    line-height: 48px;
+    z-index: 1;
+}
+.database-mobile-list p{
+    line-height: 32px;
+}
+.database-mobile-verify{
+    position: relative;
+}
+.database-warn-mobile{
+    line-height: 32px;
+    margin-top: 8px;
+}
+.database-warn-mobile label{
+    display: inline-block;
+    width: 64px;
+}
+.database-warn-mobile input{
+    display: inline-block;
+    width: 120px;
+}
+.database-warn-mobile.mobile-verify{
+    margin-top: 28px;
+}
+.database-warn-mobile.change-mobile input{
+    width: 180px;
+}
+.database-mobile-verify .mobile-format-wrong{
+    position: absolute;
+    top: 36px;
+    left: 64px;
+}
+.database-warn-mobile span{
+    display: inline-block;
+    text-decoration: underline;
+}
+.database-warn-mobile.mobile-list i{
+    display: none;
+}
+.database-warn-mobile.mobile-list:hover i{
+    display: inline-block;
+}
+.database-warn-mobile .mobile-num{
+    text-decoration: none;
+    display: inline-block;
+    width: 130px;
+}
+.database-warn-mobile.mobile-verify .cr-999{
+    text-decoration: none;
+}
+.database-mobile-list .add-other{
+    display: inline-block;
+    padding-left: 64px;
+}
+/* ****** 数据源短信预警 ****** end ****** */
+.db-view-header .database-search{
+    position: relative;
+    display: inline-block;
+    margin-right: 16px;
+    /*width: 100%;*/
+    /*height: 48px;*/
+    /*padding: 8px 16px;*/
+}
+.db-view-header .search-input input{
+    vertical-align: middle;
+    width: 80px;
+}
+.db-view-header .search-input input:focus{
+    width: 206px;
+}
+.db-view-header .search-input input.has-text{
+    width: 206px;
+    padding-right: 24px;
+}
+.db-view-header .search-input.focus{
+    width: 186px;
+    padding-left: 28px;
+    transition: all .2s ease-in-out 0s;
+    border-bottom: 2px solid #5182e4;
+}
+.db-view-header .clear-value{
+    position: absolute;
+    top: 20px;
+    right: 0;
+    display: none;
+    cursor: pointer;
+    background: none;
+}
+.db-view-header .clear-value:hover {
+    background: rgba(0,0,0,0.06);
+}
+.db-view-header .database-search .search-list{
+    position: absolute;
+    top: 44px;
+    left: 0;
+    width: 206px;
+    padding: 8px 0;
+    z-index: 10;
+}
+.db-view-header .database-search .list-title{
+    width: 100%;
+    height: 32px;
+    line-height: 32px;
+    color: #999999;
+    font-size: 11px;
+    padding-left: 16px;
+    letter-spacing: 1px;
+}
+.db-view-header .database-search .api-type-list ul{
+    max-height: 320px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.db-view-header .database-search .api-name-tag-list ul{
+    height: 166px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.db-view-header .database-search ul li{
+    width: 100%;
+    height: 32px;
+    line-height: 32px;
+    font-size: 13px;
+    padding-left: 24px;
+    text-align: left;
+}
+.db-view-header .database-search ul li:hover{
+    cursor: pointer;
+}
+.db-view-header .database-search ul li span:nth-child(1){
+    display: inline-block;
+    max-width: 95px;
+}
+.db-view-header .database-search ul li span:nth-child(2){
+    display: inline-block;
+    max-width: 80px;
+}
+.database-main .table-wrap{
+    margin: 0 24px;
+    .add-data-source-button {
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: bolder;
+        padding: 8px 16px;
+    }
+}
+#database-list th{
+    text-align: left;
+    cursor: pointer;
+}
+/* 操作栏无可用操作，所以hover上去不应该有手型图标 */
+#database-list .no-operator{
+    cursor: auto;
+}
+#database-list td{
+    white-space: normal;
+}
+#database-list td .api-name{
+    display: inline-block;
+    width: 100%;
+    vertical-align: middle;
+}
+#database-list td .api-name.short{
+    max-width: 150px;
+    width: auto;
+}
+#database-list td .api-tag{
+    position: relative;
+    top: 0;
+    display: inline-block;
+    max-width: 150px;
+    padding: 2px 4px;
+    font-size: 11px;
+    color: #888;
+    line-height: normal;
+    background: rgba(0,0,0,0.10);
+    border-radius: 2px;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+#database-list td .datasource-fail-attention{
+    margin-left: 4px;
+    margin-right: 4px;
+}
+#database-list td .database-error-msg{
+    display: inline-block;
+    max-width: 200px;
+    vertical-align: top;
+}
+#database-list td .datasource-to-table{
+    margin-left: 4px;
+    margin-right: 8px;
+}
+#database-list .sort-arrow{
+    height: 16px;
+    line-height: 16px;
+    vertical-align: top;
+    margin-left: 4px;
+}
+.database-page{
+    width: 100%;
+    height: 32px;
+    line-height: 32px;
+    position: relative;
+    margin-top: 30px;
+}
+.database-page .page-index{
+    position: absolute;
+    top: 0;
+    right: 78px;
+    display: inline-block;
+    background: none;
+}
+.database-page .page-number{
+    display: inline-block;
+    background: none;
+    border-radius: 2px;
+    padding: 8px 10px;
+    font-size: 12px;
+    line-height: 12px;
+}
+.database-page .page-number:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.database-page .page-index:hover .page-number{
+    text-decoration: underline;
+}
+.database-page .page-list{
+    position: absolute;
+    top: 30px;
+    right: 0;
+    width: 100%;
+    padding: 8px 0;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.database-page .page-list li{
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+}
+.database-page .page-list li:hover {
+    color: #666666;
+}
+.database-page .page-list li.disable{
+    color: #999999;
+    cursor: no-drop;
+}
+.database-page .page-list li.disable:hover{
+    background: none;
+}
+.database-page .page-change{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    display: inline-block;
+    width: 68px;
+    height: 30px;
+    border-radius: 2px;
+}
+.database-page .page-change span {
+    float: left;
+    width: 33px;
+    height: 30px;
+    cursor: pointer;
+}
+.database-page .page-change span i{
+    display: block;
+    margin: 7px auto;
+    opacity: 0.6;
+}
+.database-page .page-change span:hover i{
+    opacity: 1;
+}
+.database-page .page-change span.disable i {
+    opacity: 0.8;
+    cursor: no-drop;
+}
+.database-page .page-change span.disable:hover i{
+    opacity: 1;
+}
+#database-list th{
+    -moz-user-select:none;
+    -webkit-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+
+.database-page .page-change .prev-page{
+    margin-left: 1px;
+}
+
+.connect-stat{
+    margin-top: -2px;
+    margin-left: 7px;
+}
+
+.connect-link{
+    height: 32px;
+    line-height: 32px;
+    color: #7ABCE9;
+    padding-left: 104px;
+    text-decoration: underline;
+    cursor: pointer;
+    opacity: 1;
+    margin-top: -16px;
+}
+.cl-margin-top-0 {
+    margin-top: 0px;
+}
+.connect-link span:hover{
+    opacity: 0.8;
+}
+.database-config .connect-link{
+    padding-left: 100px;
+}
+.connect-link {
+    padding-left: 0;
+}
+.create-db .connect-link{
+    padding-left: 104px;
+}
+.add-database-form-ds .connect-link{
+    padding-left: 93px;
+}
+.create-db .step-layer{
+    text-align: right;
+}
+.create-db .step-layer a{
+    color:#5182E4;
+}
+.add-database-form .row-bd{
+    position: relative;
+    margin-bottom: 16px;
+}
+.add-database-form .row-bd input, .add-database-form .row-bd select{
+    height: 24px;
+}
+.add-database-form .row-bd .input-checkbox {
+    height: 12px;
+    margin-top: 2px;
+    margin-right: 5px;
+}
+.add-database-form .row-bd input[type='checkbox']{
+    height: 12px;
+}
+.add-database-form label.form-row-title{
+    float: left;
+    width: 102px;
+    text-align: right; 
+}
+.add-database-form .form-row-bd{
+    margin-left: 102px;
+}
+.add-database-form-ds label.form-row-title{
+    width: 88px;
+}
+.add-database-form .label-left{
+    display: inline-block;
+    width: auto;
+}
+.add-database-form .shenma-protocol-check .row-bd label{
+    width: auto;
+    margin-left: 104px;
+}
+.add-database-form .short{
+    width: 100px;
+}
+.add-database-form .row-bd .date-layer{
+    position: absolute;
+    left:78px;
+    bottom:28px;
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 1px 2px 3px #ddd;
+}
+
+.database-sync-wrap{
+    padding: 20px 0 0;
+}
+.database-sync-wrap .row{
+    line-height: 32px;
+}
+.database-sync-wrap label{
+    display: inline-block;
+    width: 90px;
+    // text-align: right;
+}
+.database-sync-wrap span{
+    display: inline-block;
+    margin: 0 4px;
+}
+
+.sync-operation, .remove-database{
+    cursor: pointer;
+}
+.sync-operation{
+    padding-right: 10px;
+}
+
+.force-sync-icon{
+    margin-top:-2px;
+    cursor: pointer;
+}
+
+.select-tables{
+    max-height: 200px;
+    overflow-y: auto;
+}
+.table-check{
+    display: block;
+}
+
+.ngdialog.ngdialog-theme-default.create-db-source-dialog .ngdialog-content{
+    width:600px;
+}
+.ngdialog.ngdialog-theme-default.ngdialog-w550 .ngdialog-content{
+    width: 550px;
+}
+.ngdialog.ngdialog-theme-default.ngdialog-w650 .ngdialog-content{
+    width: 650px;
+}
+.ngdialog.ngdialog-theme-default.ngdialog-w680 .ngdialog-content{
+    width: 680px;
+}
+
+#upload-data.create-db-source .upload-operate{
+    width: 130px;
+}
+/*  个人版弹窗与其它的不一致，删除内容
+#upload-data.create-db-source.personal h2{
+    font-size: 12px;
+    font-weight: normal;
+}
+#upload-data.create-db-source.personal .upload-icon{
+    margin-top: 12px;
+    margin-bottom: 14px;
+}
+#upload-data.create-db-source.personal .upload-operate{
+    position: relative;
+    width: 130px;
+}
+#upload-data.personal .tips{
+    left:0;
+    top:0;
+    width:100%;
+    height:152px;
+    position: absolute;
+    background-color: rgba(0,0,0,0.7);
+    padding: 0;
+    text-align: left;
+    color: #fff;
+    line-height: 22px;
+
+}
+#upload-data.personal .upload-operate .tips{
+    visibility: visible;
+    display: none;
+}
+#upload-data.personal .upload-operate:hover .tips{
+    display: block;
+}
+#upload-data.personal .tips a{
+    color: #7ABCE9;
+}
+#upload-data.personal .tips span{
+    transform:scale(0.8);
+    display: block;
+    width: 100%;
+    height: 100%;
+    white-space: normal;
+}
+*/
+
+/* TIP: view-header依赖; height为64 */
+.database-base-info{
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    height: 64px;
+    width: auto;
+    vertical-align: bottom;
+    padding: 0 4px;
+}
+
+/* TIP: view-header依赖; height为64 */
+.database-base-info .database-base-info-item{
+    height: 48px;
+    line-height: 48px;
+    position: relative;
+    font-size: 12px;
+    text-align: left;
+    float: left;
+}
+.database-base-info .database-base-info-item.type-1{
+    text-align: left;
+}
+/* TIP: view-header依赖; height为64 */
+.database-info-item-progress-bottom{
+    width: 100%;
+    position: absolute;
+    top: 42px;
+    left: 0;
+    height: 3px;
+    background: rgb(220,220,220);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+}
+/* TIP: view-header依赖; height为64 */
+.database-info-item-progress-top{
+    width: 0;
+    position: absolute;
+    top: 42px;
+    left: 0;
+    height: 3px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+}
+
+.ngdialog.ngdialog-theme-default .ngdialog-message.create-open-data{
+    padding: 0 21px;
+    width: 660px;
+    min-height: 330px;
+    max-height: 330px;
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
+.create-open-data .box{
+    width: 189px;
+    height:134px;
+    display: inline-block;
+    margin:0 5px;
+    padding: 2px;
+    text-align: left;
+}
+.create-open-data .box .bg{
+    width:100%;
+    bottom: 0;
+    left:0;
+    height:32px;
+    line-height: 32px;
+}
+
+.create-open-data .box.active .bdp-icon{
+    right:0;
+    top:0;
+    opacity: 1;
+}
+.create-open-data .box.disable .bdp-icon{
+    display: block;
+    right:0;
+    top:0;
+    opacity: 1;
+}
+.create-open-data .box .box-mask{
+    display: none;
+}
+.create-open-data .box:hover > .title{
+    display: none;
+}
+.create-open-data .box:hover .box-mask{
+    display: block;
+    left:0;
+    top:0;
+    width: 100%;
+    height:100%;
+    color: #fff;
+    padding:0 16px;
+}
+.create-open-data .box .box-mask .title{
+    margin-top:18px;
+    font-size: 14px;
+}
+.form-layer-a .row{
+    margin-bottom: 16px;
+}
+.form-layer-a .title{
+    float: left;
+    width: 100px;
+    text-align: right;
+}
+.form-layer-a .form-row-bd{
+    margin-left:100px;
+}
+.input-text{
+    /*line-height: 28px !important;*/
+    /*height: 28px !important;*/
+}
+
+
+.personal-add-datasource{
+    width: 521px;
+    margin: 100px auto;
+}
+.personal-add-datasource p{
+    line-height: 20px;
+}
+.personal-add-datasource #upload-data.personal{
+    width: 520px;
+    /* Mask: */
+    box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.10), 0px 2px 4px 0px rgba(0,0,0,0.10);
+    border-radius: 2px 0px 0px 2px;
+    border-top:0;
+}
+
+.database-panel {
+    padding: 16px 20px;
+    /*border: 1px solid #d6d6d6;*/
+    background: #F6F6F6;
+    border-radius: 2px;
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.15) inset, 0px 1px 1px 0px rgba(0, 0, 0, 0.15) inset;
+}
+
+
+/* 开发者中心:taoruibing */
+/* TODO 把id改为class */
+.developer-center {
+    position: relative;
+}
+#developerCenter {
+    overflow: auto;
+    height: 100%;
+}
+/* TIP: view-header依赖; top为64 */
+.developer-center .developer-items-wrap {
+    padding-top: 64px;
+    height: 100%;
+}
+
+.developer-center .developer-items-content {
+    height: 100%;
+    overflow: auto;
+}
+
+ #developerCenter .items {
+     margin: 0 auto;
+     width: 960px;
+     list-style: none;
+     .ips{
+         padding: 16px;
+     }
+ }
+ #developerCenter .items .intro{
+    line-height: 32px;
+    padding: 8px 16px;
+ }
+ #developerCenter .items .token{
+    padding: 16px;
+    .tip,.show-token{
+        line-height: 32px;
+    }
+
+ }
+#developerCenter .items > li {
+    // width: 685px;
+    border-bottom: none;
+    // border-bottom: 1px solid rgba(0,0,0,0.10);
+    // padding: 24px 0 16px 0;
+    padding-top: 16px;
+    padding-bottom: 0;
+}
+#developerCenter .items > li > * {
+    // display: inline-block;
+    // vertical-align: top;
+    // width: 463px;
+}
+#developerCenter .items > li > h4 {
+    // margin-left: -3px;
+    // width: 165px;
+    font-weight: bold;
+}
+#developerCenter button {
+    cursor: pointer;
+}
+#developerCenter .token_btn {
+    text-decoration: underline;
+    padding: 0 10px 0 0;
+    background-color: transparent;
+}
+
+#developerCenter h5 {
+    // text-align: center;
+    margin: 24px 0 21px;
+    font-weight: normal;
+}
+#developerCenter form h5 {
+    width: 58px;
+    // text-align: right;
+}
+#developerCenter .tokenForm {
+    width: 338px;
+    height: 0;
+    box-sizing: border-box;
+    transition: height 1s;
+    overflow: hidden;
+}
+#developerCenter .tokenForm.show {
+    height: auto;
+    margin-bottom: 16px;
+}
+#developerCenter .tokenForm li {
+    margin-bottom: 16px;
+}
+#developerCenter .tokenForm li > label {
+    text-align: right;
+    display: inline-block;
+    width: 58px;
+    margin-right: 8px;
+    overflow: hidden;
+    vertical-align: middle;
+}
+#developerCenter .tokenForm input {
+    width: 200px;
+    height: 28px;
+    line-height: 28px;
+    box-sizing: border-box;
+}
+#developerCenter #yourCode {
+    width: 70px;
+}
+#developerCenter #yourAccount {
+    box-shadow: none;
+    background-color: transparent;
+}
+
+#developerCenter input[type="password"] {
+
+}
+#developerCenter p.errorTip,
+#developerCenter .ipError {
+    height: 24px;
+    text-align: center;
+    font-size: 12px;
+}
+#developerCenter p.errorTip {
+    margin-top: 4px;
+    text-align: left;
+    padding-left: 66px;
+}
+#developerCenter .ipError {
+
+}
+#developerCenter .tokenForm .btn {
+    margin: -16px 0 0;
+    text-align: right;
+    padding-right: 68px;
+}
+#developerCenter .ips label {
+    width: 60px;
+    text-align: left;
+    display: inline-block;
+}
+#developerCenter .ips li {
+    padding:  8px 0;
+}
+#developerCenter .ips > li {
+    padding: 0 0 8px 0;
+}
+#developerCenter .ips li.firstLi {
+    padding: 4px 0 8px 0;
+}
+#developerCenter .ips .ip {
+    border-radius: 0;
+    line-height: 28px;
+    padding: 0 5px;
+}
+#developerCenter .ips button {
+    padding: 0 3px;
+}
+#developerCenter .ipList button {
+    visibility: hidden;
+}
+#developerCenter .ipList li:hover button {
+    visibility: visible;
+}
+#developerCenter li.ipList {
+    padding: 5px 0 0;
+}
+#developerCenter .ipList > p {
+    float: left;
+    padding-top: 3px;
+}
+#developerCenter .ipList > ul {
+    margin-left: 76px;
+    width: 150px;
+}
+#developerCenter .ipSpan {
+    width: 100px;
+    display: inline-block;
+}
+#developerCenter .noIp {
+    color: #999;
+}
+#developerCenter .documents {
+    line-height: 17px;
+    text-decoration: underline;
+    display: inline-block;
+    margin-left: 16px;
+}
+#developerCenter li.manual {
+    border-bottom: none;
+}
+#developerCenter li.manual .content,
+#developerCenter li.dev-mode .content{
+    line-height: 32px;
+    padding: 16px;
+    //margin-bottom: 148px;
+    /* 开发者在获取开发者Token后，可以阅读: */
+}
+#developerCenter input[type="radio"] {
+    vertical-align: bottom;
+}
+
+#developerCenter {
+    li.dev-mode{
+        input.count {
+            width: 48px;
+            margin-left: 8px;
+            margin-right: 4px;
+            //text-align: center;
+        }
+        .intend-content{
+            margin-left: 16px;
+        }
+        p {
+            margin-bottom: 4px;
+        }
+        span.green-light {
+            color: #80D169;
+        }
+    }
+}
+.ngdialog.ngdialog-theme-default.dev-center-dialog{
+    .mt-2{
+        margin-top: -2px;
+    }
+    .mt-5{
+        margin-top: -5px;
+    }
+}
+
+/*商派关联店铺*/
+.shopex-add-db .database-panel{
+    min-height: 100px;
+    max-height: 184px;
+    overflow-y: auto;
+    margin: 10px 0;
+    padding: 10px 16px;
+}
+
+.shopex-add-db .add-database-form .row-bd{
+    margin:0;
+    line-height: 28px;
+}
+
+/* 为空的时候，不要显示 */
+.shopex-user-body .empty-project-wrap {
+    display: none;
+}
+.shopex-user-body .empty-dash-edit-wrap {
+    /* js动态修改了，所以用important */
+    padding-left: 0 !important;
+}
+.shopex-empty-dash-btn-wrap .bdp-btn {
+    height: 54px;
+    width: 180px;
+    font-size: 16px;
+}
+
+.remarkInput {
+    display: inline;
+    margin-right: 14px;
+}
+
+.database-date-picker {
+    /*display: none;*/
+    position: absolute!important;
+    top: 32px;
+    left: -12px;
+    z-index: 2;
+    // padding: 15px 8px;
+}
+
+.url-tip-layer{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 11;
+}
+.url-tip-layer .opeate-note dt{
+    float: left;
+}
+.url-tip-layer .opeate-note dd{
+    margin-left: 80px;
+}
+.url-tip-layer .opeate-note li{
+    list-style-type: initial;
+}
+
+.url-tip-layer .ngdialog-buttons{
+    padding: 0 10px 0 0 !important;
+}
+
+.errTipsLayer.api-exceed{
+    div{
+        padding: 0 8px;
+    }
+}
+
+
+.db-view-header {
+  background: $bgHtmlBody;
+}
+.db-view-header .clear-value:hover {
+    background: $bgColIconHover;
+}
+
+.database-search .list-title{
+  color: $fontDatabaseSearchListTitle;
+}
+.database-search ul li.no-result:hover{
+  background: $bgNone;
+}
+.database-search ul li span:nth-child(1){
+  color: $fontTextActive2;
+}
+#database-list thead th{
+  font-weight: $weightDatabaseListTh;
+}
+#database-list td .api-tag{
+  color: $fontDsDbTitleDsTag;
+  background-color: $bgDsDbTitleDsTag;
+}
+
+.database-page .page-number{
+  color: $fontLogPagesPageNumber;
+}
+.database-page .page-number:hover{
+  background-color: $bgDropdownItemHover;
+}
+
+.database-page .page-list{
+  background: $bgDropdownWrap;
+}
+.database-page .page-list li{
+  color: $fontText;
+}
+.database-page .page-list li:hover {
+  color: $fontTextHover;
+  background-color: $bgDropdownItemHover;
+}
+.database-page .page-list li.disable{
+  color: $fontTextTip;
+}
+.database-page  .page-change span:hover {
+  background: $bgColIconHover;
+}
+.database-content td.datasource-opt a:hover {
+  color: $fontTextHover;
+}
+.connect-link{
+  color: $fontTextActive;
+}
+.add-database-form .row-bd .date-layer{
+  background-color: $bgAddDatabaseFormDateLayer;
+  box-shadow: $shadowAddDatabaseFormDateLayer;
+}
+#upload-data.personal .tips{
+  background-color: $bgUploadDataPersonalTips;
+  color: $fontUploadDataPersonalTips;
+}
+#upload-data.personal .tips a{
+  color: $fontUploadDataPersonalTipsA;
+}
+.database-info-item-progress-bottom{
+  background-color: $bgDatabaseInfoItemProgressBottom;
+}
+.database-info-item-progress-top{
+  background-color: $bgDatabaseInfoItemProgressTop;
+}
+.create-open-data .box{
+  background-color: $bgCreateOpenDataBox;
+  box-shadow: $shadowCreateOpenDataBox;
+}
+.create-open-data .box .bg{
+  background-color: $bgCreateOpenDataBoxBg;
+  color:$bgCreateOpenDataBoxColor;
+}
+.create-open-data .box.active {
+  box-shadow: $shadowCreateOpenDataBoxActive;
+}
+.create-open-data .box.disable{
+  // box-shadow: $shadowCreateOpenDataBoxDisable;
+  background: $bgCreateOpenDataBoxDisable
+}
+.create-open-data .box.no-data .bg{
+  color: $fontCreateOpenDataBoxNoData;
+  background-color: $bgCreateOpenDataBoxNoDataBg;
+}
+.create-open-data .box:hover .box-mask{
+  background-color: $bgCreateOpenDataBoxHoverBoxMask;
+  color: $fontCreateOpenDataBoxHoverBoxMask;
+}
+
+.personal-add-datasource #upload-data.personal{
+  box-shadow: $shadowPersonalAddDataSourceUploadData;
+}
+.database-panel {
+    background: $bgDatabasePanel;
+}
+
+#developerCenter {
+  color: $fontDeveloperCenter;
+}
+#developerCenter .items .intro{
+  background-color: $bgColorDeveloperCenterItem;
+}
+#developerCenter .items .token{
+  background-color: $bgColorDeveloperCenterItem;
+}
+#developerCenter .items .ips{
+  background-color: $bgColorDeveloperCenterItem;
+}
+#developerCenter .items > li {
+  border-bottom-color: $borderBottomDeveloperCenterItemsLi;
+}
+#developerCenter .token_btn {
+  border: $borderDeveloperCenterTokenBtn;
+  color: $fontDeveloperCenterTokenBtn;
+  background-color: $bgDeveloperCenterTokenBtn;
+}
+#developerCenter li.manual .content,
+#developerCenter li.dev-mode .content{
+  background-color: $bgColorDeveloperCenterItem; 
+}
+
+#developerCenter #yourAccount {
+  background-color: $bgDeveloperCenterYourAccount;
+  border: $borderDeveloperCenterYourAccount;
+  color: $fontText;
+}
+
+#developerCenter p.errorTip{
+  color: $fontDeveloperCenterPErrorTip;
+}
+#developerCenter .ipError {
+  color: $fontDeveloperCenterIpError;
+}
+#developerCenter .ips button {
+  background-color: $bgDeveloperCenterIpsButton;
+  border: $borderDeveloperCenterIpsButton;
+}
+#developerCenter .ipList li {
+  color: $fontDeveloperCenterIpListLi;
+}
+#developerCenter .ipList li:hover {
+  color: $fontDeveloperCenterIpListLiHover;
+}
+#developerCenter .ipList .noIp:hover {
+  color: $fontDeveloperCenterIpListNoIpHover;
+}
+#developerCenter .noIp {
+  color: $fontDeveloperCenterNoIp;
+}
+#developerCenter .documents {
+  color: $fontDeveloperCenterDocuments;
+}
+
+.col-monitor {
+  color: $fontColMonitor;
+}
+
+.col-less-money {
+  color: $fontColLessMoney;
+}
+
+.col-end-task {
+  color: $fontColEndTask;
+}
+
+.col-stop-task {
+  color: $fontColStopTask;
+}
+
+.shopex-add-db .base-loading-layer {
+    background: $bgBaseLoadingLayer;
+}
+.database-main .table-wrap{
+    .add-data-source-button {
+      color: $fontAddDataSourceButton;
+      border: solid 2px $borderAddDataSourceButton;
+    }
+}
+/* ---------- end   数据源 datasource 相关颜色 created by mayubo ----------*/
+.errTipsLayer.api-exceed a{
+  color: $fontErrTips;
+}

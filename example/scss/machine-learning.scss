@@ -1,0 +1,2191 @@
+//定制对话框底色
+.ngdialog.ngdialog-theme-default.ml-apply-dialog{
+    .ngdialog-content{
+        background: $mlInfoBoardBG;
+        box-shadow: $mlDialogShadow;
+    }
+}
+
+
+.ml-fields-hlist{
+    li{
+        display: inline-block;
+        margin-right: 8px;
+        padding: 2px 15px;
+    }
+}
+
+.machine-learning,
+.setup-training{
+
+    .bdp-icon.ico-attention-active{
+        opacity: 1;
+    }
+
+    .bdp-tooltip{
+        display: inline-block;
+        z-index: 10;
+    }
+    .bdp-tooltip-content{
+        padding: 16px;
+        line-height: 20px;
+        font-size: 12px;
+        font-weight: normal;
+
+        &.-w300px{
+            width: 300px;
+        }
+    }
+
+    //通用小样式
+    .bright-attention{
+        font-size: 18px;
+    }
+
+    .full-height{
+        height: 100%;
+    }
+
+    //留10px空隙的内层容器
+    .elastic10{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        bottom: 10px;
+        left: 10px;
+    }
+
+    .card{
+        width: 100%;
+        height: 100%;
+    }
+
+    .cool-background{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url(../images/ml/cool-digital-wave.png) 0 0 no-repeat;
+        background-size: 100%;
+        background-position-y: 100%;
+    }
+
+    //需要外层是一个定高定宽的封闭容器
+    .center-card{
+        width: 388px;
+        line-height: 32px;
+        padding: 16px 40px;
+        margin: 74px auto auto;
+
+        .section{
+            padding: 16px 24px;
+            .bright-font, input {
+                font-size: 13px;
+            }
+        }
+        input{
+            width: 100%;
+        }
+
+        &.-w960{
+            width: 960px;
+        }
+
+        //纵向收紧
+        &.-crowded{
+            .section{
+                padding-top: 8px;
+                padding-bottom: 8px;
+            }
+        }
+
+        .evaluations{
+            width: 537px;
+            height: 348px;
+            overflow-y: auto;
+            float: right;
+            margin: 16px 0;
+            padding-right: 4px;
+            position: relative;
+
+            table.full-width{
+                width: 100%;
+                table-layout: fixed;
+            }
+            td{
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+
+            p.title{
+                font-size: 14px;
+                font-weight: bold;
+            }
+            &.mt-8{
+                margin-top: -8px;
+            }
+
+            .bdp-tooltip{
+                display: inline-block;
+            }
+            .bdp-tooltip-content{
+                width: 200px;
+                right: -100%;
+                left: initial;
+            }
+
+        }
+
+    }
+
+    //撑满空间的容器
+    .container-48-24-16-24{
+        position: absolute;
+        top: 48px;
+        bottom: 16px;
+        left: 24px;
+        right: 24px;
+    }
+
+
+    //决策树 - 混淆矩阵 ROC曲线
+    .decision-tree {
+        width: 100%;
+        height: 100%;
+
+        .title{
+            display: inline-block;
+            text-align: center;
+            width: 100%;
+        }
+
+
+        .matrix-outer{
+            width: 100%;
+            position: absolute;
+            top: 36px;
+            bottom: 0;
+
+            .matrix-inner{
+                height: calc(100% - 20px);
+                width: calc(100% - 20px);
+                position: absolute;
+                right: 0;
+                bottom: 0;
+            }
+
+            //不能透明，要重写一遍model-detail card的底色
+            .__fixed-column-wrap,
+            .__fixed-column-header{
+                //background: #24273E;
+            }
+
+            //条目很少的时候，也要占满容器
+            .__table-body table{
+                min-width: 100%;
+                min-height: calc(100% - 2px);
+            }
+            .__fixed-column-wrap table{
+                min-height: calc(100% - 2px);
+            }
+        }
+
+        fieldset{
+            position: absolute;
+            text-align: center;
+            //border-top: 1px solid rgba(255,255,255,0.06);
+            top: -27px;
+
+            legend{
+                padding: 0 14px;
+            }
+
+            &.-x{
+                width: 100%;
+            }
+        }
+        //纵向
+        fieldset.-y{
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: -12px;
+
+            &:before,
+            &:after{
+                content: '';
+                position: absolute;
+                display: block;
+                height: calc(50% - 40px);
+                width: 1px;
+                //background: rgba(255,255,255,0.06);
+            }
+            &:before{
+                top: 0;
+            }
+            &:after{
+                bottom: 0;
+            }
+        
+            legend{
+                position: absolute;
+                top: 50%;
+                text-align: center;
+                transform: rotate(-90deg);
+                transform-origin: 0;
+                padding: 0;
+                line-height: 17px;
+            }
+
+            &.-en:before,
+            &.-en:after{
+                height: calc(50% - 40px);
+            
+            }
+            &.-en legend{
+                top: calc(50% + 15px);
+            }
+        }
+
+        .scroll-wrap{
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+
+            table{
+                table-layout: fixed;
+                min-width: 100%;
+                min-height: calc(100% - 2px);
+            }
+        }
+
+        td.diagonal{
+            //background: #DFA303;
+        }
+        td.unexpected{
+            //background: rgba(85, 137, 240, 0.3);
+        }
+        td,th{
+            padding: 11px 15px;
+            //border: 1px solid #24273E;
+            //background: rgba(85, 137, 240, .15);
+            text-align: center;
+            line-height: initial;
+            white-space: nowrap;
+        }
+        th{
+            //background: rgba(255,255,255, 0.03);
+        }
+        td:first-child{
+            //background: rgba(255,255,255, 0.06);
+        }
+
+
+        .roc-chart{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            height: calc(100% - 40px);
+            width: 100%;
+        }
+    
+    }
+
+    .power-tip{
+        vertical-align: top;
+        font-size: 0.5em;
+    }
+
+    .bdp-tooltip-content{
+        width: 120px;
+        left: -60px;
+    }
+
+    //表头帽子样式定义
+    .cap-inner{
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        font-size: 12px;
+
+        .label,
+        .feature{
+            display: block;
+        }
+        .variance{
+            /* Rectangle 9: */
+            opacity: 0.49;
+            //background: #5355B7;
+            //box-shadow: inset 1px 0px 0px 0px #5355B7;
+        }
+    }
+
+    .bdp-btn.-box{
+        position: relative;
+
+        .dot-guide-tip{
+            bottom: 35px;
+            top: initial;
+            width: auto;
+            padding: 16px;
+            text-transform: initial;
+        }
+
+        .circle-group{
+            top: -50%;
+        }
+    }
+
+    .btn-bar{
+        .bdp-btn{
+            min-width: 96px;
+            padding: 0px 16px;
+        }
+    }
+
+    //切角用渐变背景方案替代
+    .drag-target-inner{
+        .tag{
+           //渐变切角：http://www.w3cplus.com/css3/css-secrets/cutout-corners.html
+           //background: linear-gradient(-135deg, transparent 5px, #5182E4 0); 
+           //去掉原有切角实现
+           &:before,
+           &:after{
+             content: initial;
+           }
+        }
+        span.name{
+            max-width: 80%;
+            span{
+                max-width: 100%;
+            }
+        }
+    }
+
+}
+
+.welcome{
+    .cool-brain {
+        width: 75%;
+        height: 100%;
+        float: right;
+        background: url(../images/ml/cool-brain.png) 0 0 no-repeat;
+        background-size: 100%;
+        background-position-y: 100%;
+    }
+
+    .entry{
+        position: absolute;
+        left: 10%;
+        top: 40%;
+
+        .script{
+            font-size: 14px;
+            letter-spacing: 9px;
+        }
+        h1{
+            line-height: 64px;
+            font-size: 44px;
+            letter-spacing: .4em;
+            font-weight: 200;
+        }
+
+        .start-btn{
+            margin: 24px 0;
+            padding: 8px 30px 10px 34px;
+            font-weight: normal;
+            display: inline-block;
+            cursor: pointer;
+            font-size: 16px;
+
+            &:hover{
+                //background: #5182E4;
+            }
+        }
+    }
+    .never-welcome{
+        width: 236px;
+        position: absolute;
+        left: 10%;
+        bottom: 40px
+    }
+}
+
+.setup-training{
+    $headerBarHeight: 64px;
+    $bottomBarHeight: 65px;
+    height: 100%;
+
+    .stepper-progress{
+        position: absolute;
+        top: 0;
+        //left: calc(50% - 220px);   //居中减去自身宽度一半
+        width: 100%;
+        z-index: -1;
+
+        .bdp-icon{
+            opacity: 1;
+        }
+
+        .gray-bar-2px{
+            display: inline-block;
+            width: 40px;
+            height: 2px;
+            vertical-align: middle;
+            background: rgba(163,171,176,0.2);
+        }
+
+        .step {
+            display: inline-block;
+            margin: 0 8px;
+
+            &:first-child{
+                margin-left: 0;
+            }
+
+            label{
+                vertical-align: middle;
+                margin-left: 4px;
+                font-size: 14px;
+            }
+        }
+    }
+
+    .setup-training-body{
+        position: relative;
+        top: $headerBarHeight;
+        height: calc(100% - #{$headerBarHeight} - #{$bottomBarHeight});
+    }
+
+    $spaceLeftWidth: 24px;
+    $fieldStatsWidth: 260px;
+
+    //以下布局 依赖一个有宽高的封闭盒子 setup-training-body
+    /* 只左右分栏布局（不带header） */
+    .ds-main{
+        padding: 0 $spaceLeftWidth;
+
+        &.-t16{
+            top: 16px;
+        }
+
+        .header{
+            display: none;
+        }
+        .content-wrap{
+            height: 100%;
+            width: calc(100% - #{$fieldStatsWidth});
+            padding-right: 8px;
+            overflow-x: auto;
+        }
+        .right-content-wrap{
+            height: calc(100% - 16px);
+            width: $fieldStatsWidth;
+            position: absolute;
+            bottom: 16px;
+            right: $spaceLeftWidth;
+
+            .stats-chart{
+                margin-left: -8px;
+                position: relative;
+                height: 213px;
+                margin-top: 32px;
+
+            }
+
+            .stats-blocks{
+            
+                .block{
+                    background: rgba(0,0,0,0.12); 
+                    width: calc(25% - 1px);
+                    height: 73px;
+                    float: left;
+                    margin-right: 1px;
+                    margin-bottom: 1px;
+                    text-align: center;
+                    line-height: initial;
+                    position: relative;
+                    padding: 17px 7px 0;
+
+                    p{
+                        max-width: 100%;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                    }
+                }
+                &.-column3{
+                    width: calc(33% - 1);
+                }
+            }
+
+            //列表式的统计信息
+            .stats-list{
+                line-height: 40px;
+
+                label{
+                    font-weight: bold;
+                    width: 64px;
+                    display: inline-block;
+
+                    &.-en{
+                        width: 113px;
+                    }
+                }
+            
+            }
+
+            .vcenter{
+                position: relative;
+                margin-top: 50%;
+                text-align: center;
+            }
+
+            textarea{
+                width: 100%;
+                height: 4.5em;
+            }
+        }
+    }
+
+    /* T字形布局（带header) */
+    .ds-main.tshap {
+        $titleBarHeight: 80px;
+
+        .header{
+            display: block;
+            height: $titleBarHeight - 32px;
+            line-height: $titleBarHeight - 32px;
+            margin: 16px 0;
+
+            .drag-target-inner{
+                display: inline-block;
+                min-width: 200px;
+                height: 28px;
+                line-height: 28px;
+                padding: 0 16px;
+                max-width: calc(100% - 200px);
+
+                .tag{
+                    max-width: 100%;
+                    .name{
+                        max-width: 100%;
+                        span{
+                            max-width: 100%;
+                        }
+                    }
+                }
+
+                &.blank{
+                    border: 1px dashed rgba(81,130,227,0.60);
+                }
+            }
+        }
+    
+        .content-wrap {
+            height: calc(100% - #{$titleBarHeight} - 16px);
+
+
+        }
+        .right-content-wrap{
+            height: calc(100% - #{$titleBarHeight} - 16px);
+        }
+    }
+
+    .ds-aside{
+        //line-height: 32px;
+        //overflow: hidden;  为了筛选器拖拽删除
+        display: flex;
+        flex-direction: column;
+
+        .field-list{
+            flex-grow: 2;
+            max-height: calc(100% - 300px);
+            overflow-y: auto; 
+        }
+
+        .label{
+            box-shadow: 0px 0px 0px 1px #5182E4;
+            border-radius: 1px;
+            padding: 0 2px;
+        }
+
+        .filter-layer{
+            flex-grow: 1;
+            min-height: 150px;  //覆盖筛选器默认样式
+            overflow-y: auto;
+
+            &:before{
+                content: '';
+                display: block;
+                width: calc(100% - 14px);
+                position: absolute;
+                top: 0;
+                right: 0;
+                
+            }
+        }
+
+        ul.selectable-field-list{
+            li{
+                background: rgba(215,215,215,0.00);
+            
+            }
+            li.focused{
+                opacity: 0.4;
+                background-image: linear-gradient(-180deg, rgba(68,101,224,0.00) 0%, rgba(68,101,224,0.00) 71%, #4565E0 100%);
+                box-shadow: inset 0px -1px 0px 0px #5A87CD;
+            }
+        }
+
+        //文件夹树状结构 单选
+        .folder-tree{
+            overflow: auto;
+            height: 100%;
+
+            .folder-name {
+                padding: 5px 10px;
+                padding-left: 24px;
+
+            }
+
+            .folder-name .bdp-icon {
+                margin-top: -2px;
+                margin-right: 4px;
+            }
+            .table-name {
+                font-size: 12px;
+                display: block;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                height: 32px;
+                position: relative;
+            }
+
+            //子文件夹
+            .sub-folder-list{
+                .folder-name,
+                .table-name{
+                    padding-left: 48px !important;
+                }
+            }
+
+            .table-name.search-hover a{
+                font-weight: bold;
+            }
+
+            .table-name.active a {
+                position: relative;
+            }
+
+            .table-name .ico-sheet-active {
+                display: none;
+            }
+
+            .table-name.active .ico-sheet-active {
+                display: inline-block;
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+
+            .table-name a {
+                display: inline-block;
+                overflow: hidden;
+                max-width: 100%;
+                line-height: 32px;
+                padding: 0 8px;
+                padding-left: 24px;
+                text-overflow: ellipsis;
+            }
+
+            .table-name a:hover i {
+                opacity: 1;
+            }
+
+            .table-name a .bdp-icon {
+                margin-top: -3px;
+            }
+
+            .folder-db-list .table-name {
+                padding-left: 24px;
+            }
+        }
+
+    }
+
+
+    .worktable-name{
+        position: absolute;
+        top: 64px + 16px;
+        left: 0px;
+        font-weight: bold;
+        padding-left: 26px;
+    }
+
+    .ds-main.training-dataset{
+        top: 64px + 48px;
+        left: 0px;
+        right: 0;
+        bottom: 0 + 25px;
+    }
+
+    .setup-training-footer{
+        position: absolute;
+        height: $bottomBarHeight;
+        line-height: $bottomBarHeight;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+
+        .cube-btn:first-child{
+            margin-left: 0;
+        }
+
+        .bdp-btn{
+            font-size: 14px;
+            padding: 0 25px;
+            line-height: 32px;
+            height: 32px;
+        }
+        /* Rectangle 19: */
+    }
+
+}
+
+.machine-learning {
+    position: relative;
+    height: 100%;
+
+    .ds-aside{
+        padding-top: 16px;
+        width: 260px;
+    }
+    .aside-title{
+        margin: 16px 16px 0;
+        line-height: 32px;
+    }
+
+    .model-list{
+        overflow-y: auto;
+        height: calc(100% - 120px); 
+    }
+    .menu-list{
+        .menu-item{
+            height: 48px;
+            line-height: 48px; 
+
+            .model-name{
+                display: inline-block;
+                overflow: hidden;
+                vertical-align: middle;
+                text-overflow: ellipsis;
+                width: calc(100% - 100px);
+            }
+            .model-status{
+                position: absolute;
+                left: calc(100% - 75px);
+                span{
+                    vertical-align: middle;
+                    font-size: 12px;
+                }
+            }
+        }
+
+    
+    }
+
+    .start-training-btn{
+        display: block;
+        margin: 0 16px;
+        text-align: center;
+        font-size: 12px;
+
+        .bdp-icon{
+            vertical-align: text-top;
+            margin-right: 4px;
+            transition: all .2s ease-in-out;
+        }
+
+        //hover动画效果，加号旋转
+        &:hover .bdp-icon{
+            transform: rotate(90deg);
+        }
+    }
+    
+    .ds-aside{
+        ul.model-list{
+            li{
+                /* Rectangle 561: */
+                height: 48px;
+                line-height: 48px;
+            }
+        }
+    
+    }
+    /* 机器学习，模型详情 - 带标题header的T字布局 */
+    .ds-main.model {
+        $titleBarHeight: 64px;
+        $spaceLeftWidth: 24px;
+        $rightCardWidth: 304px;
+
+        padding: 0 $spaceLeftWidth $spaceLeftWidth $spaceLeftWidth;
+        left: 260px;
+        min-width: 780px;
+
+        .header{
+            height: $titleBarHeight;
+            line-height: $titleBarHeight;
+            position: relative;
+
+            h2{
+                display: inline-block;
+                line-height: $titleBarHeight;
+                position: relative;
+                margin-left: 0;
+                vertical-align: middle;
+                font-size: 24px;
+                font-weight: normal;
+                max-width: calc(100% - 420px);  //英文宽度
+            }
+            input.model-name{
+                font-size: 24px;
+                vertical-align: middle;
+                height: 32px;
+            }
+            .rename-btns{
+                display: inline-block;
+                vertical-align: middle;
+            }
+            
+            .btn-layer{
+                font-style: normal;
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: auto;
+                height: 64px;
+
+                a{
+                    display: inline-block;
+                    padding: 0 15px; 
+                    cursor: pointer;
+                }
+
+                .btn-layer-opt {
+                    position: relative;
+                }
+
+                .btn-layer-hover-line,.header-view .btn-layer .btn-layer-hover-line {
+                    opacity: 0;
+                    position: absolute;
+                    top: 10px;
+                    left: 24px;
+                    right: 24px;
+                    display: block;
+                    box-sizing: border-box;
+                    height: 10px;
+                    box-shadow: 0 -1px 0 0 rgba(81, 130, 228, 1) inset;
+                    transition: all .2s ease-in-out;
+                }
+
+                a:hover .btn-layer-hover-line,.header-view .btn-layer a:hover .btn-layer-hover-line {
+                    transition: all .2s ease-in-out;
+                    opacity: 1;
+                    left: 0;
+                    right: 0;
+                }
+            }
+        }
+        .content-wrap {
+            width: calc(100% - #{$rightCardWidth});
+            height: calc(100% - #{$titleBarHeight});
+            padding-right: 8px;
+
+            .model-detail {
+                position: relative;
+                padding: 32px 40px;
+
+
+                .summary{
+                    height: 56px;
+                    line-height: 56px;
+
+                    li{
+                        margin-right: 65px;
+                        display: inline-block;
+                    }
+
+                }
+                .chart{
+                    width: 100%;
+                    height: calc(100% - 128px);
+                    position: relative;
+                    overflow: visible;
+                    
+                    .title{
+                        font-weight: bold;
+                        font-size: 14px;
+                    }
+
+                    .formula-box{
+                        font-size: 16px;
+                        //font-weight: 300;
+                        padding: 25px 24px;
+                        line-height: 36px;
+                        overflow-y: auto;
+
+                        //等号左边
+                        .__left-equal{
+                            white-space: nowrap;
+                            vertical-align: top;
+                            padding-right: 4px;
+                        }
+                        .__expression{
+                        
+                        }
+
+                        .__sign{
+                            margin: 0 10px;
+                        }
+                        .__term{
+                            vertical-align: middle;
+                        }
+                        .__cnum{
+                            vertical-align: middle;
+                        }
+                        //.__label{
+                        //    height: 28px;
+                        //    line-height: 28px;
+                        //    padding: 0 16px;
+                        //    position: absolute;
+                        //    top: -14px;
+                        //    left: 16px;
+                        //    /* Rectangle 8: */
+                        //    background: #5355B7;
+                        //}
+                        .formula-inner{
+                            position: relative;
+                            min-width: 400px;  //如果太窄了这公式实在是没法看
+                        }
+                    }
+
+                    .decision-tree .title{
+                        text-align: left;
+                        margin-left: 0;
+                    }
+
+                    .chart-inner{
+                        width: 100%;
+                        height: calc(100% - 33px);
+                        position: absolute;
+                        bottom: 0;
+                    }
+
+
+                }
+                .btn-bar{
+                    height: 32px;
+                    text-align: center;
+                }
+                .btn-wrap{
+                    display: inline-block;
+                    position: relative;
+
+                    .title{
+                        font-weight: bold;
+                    }
+
+                    .bright-font{
+                        font-weight: bold;
+                    }
+
+                    .dot-guide-tip{
+                        text-align: left;
+                        top: initial;
+                        width: 430px;
+                        bottom: 150%;
+                        left: -50px;
+                        text-transform: initial;
+                    }
+
+                    //定制按钮位置
+                    .tip-operate .cube-btn{
+                        padding: 0 16px;
+                        margin-right: -16px;
+                    }
+                }
+
+                //模型训练状态 主图
+                .model-status{
+                    height: 100%;
+                    //background: url(../images/ml/model-status-training.png) 0 0 no-repeat;
+                    background-size: 100%;
+                    background-position-y: 100%;
+                    background-repeat: no-repeat;
+
+                    &.-training{
+                        overflow: hidden;
+                        margin-left: -40px;
+                        position: relative;
+                        margin-right: -40px;
+                        border: none;
+                        .title{
+                            left: 41%;
+                            text-align: center;
+                        }
+                        h3{
+                            padding-left: .7em;  //为了居中，补偿一下letter-spacing
+                        }
+                        .video{
+                            position: relative;
+                            //min-width: 100%;
+                            height: 300px;
+                            width: 800px;
+                            margin: auto;
+                            top: calc(50% - 150px);
+                            max-width: 100%;
+                        }
+                    }
+
+                    &.-failed{
+                        background-image: url(../images/ml/model-status-failed.png);
+                        .sub-title{
+                            letter-spacing: .2em;
+                        }
+                    }
+
+                    .title{
+                        position: absolute;
+                        left: 27%;
+                        top: 27%;
+                    }
+                
+                    h3{
+                        font-size: 18px;
+                        font-weight: normal;
+                        letter-spacing: .7em;
+                    }
+                    .sub-title{
+                        letter-spacing: .4em;
+                    }
+
+                }
+            }
+        }
+        .right-content-wrap{
+            width: $rightCardWidth;
+            height: calc(100% - #{$titleBarHeight + $spaceLeftWidth});
+            position: absolute;
+            bottom: $spaceLeftWidth;
+            right: $spaceLeftWidth;
+
+            .time-used{
+                margin: 40px 32px 56px;
+            }
+            .start-time,
+            .end-time{
+                margin: 32px;
+            }
+
+            .bright-attention{
+                margin-left: 32px;
+                margin-top: 16px;
+            }
+            
+            .blue-dot,
+            .green-dot,
+            .red-dot{
+                width: 4px;
+                height: 4px;
+                border-radius: 2px;
+                display: inline-block;
+                vertical-align: middle;
+            }
+            .blue-dot{
+                background-color: #4D83E5;
+            }
+            .green-dot{
+                background-color: #4AD264;
+            }
+            .red-dot{
+                background-color: #E45151;
+            }
+        }
+
+    }
+
+
+    //absolute header下的内容布局
+    .content-container{
+        position: absolute;
+        top: 64px;
+        left: 0px;
+        right: 0;
+        bottom: 64px + 25px;
+        $spaceWidth: 24px;
+    
+        .summary {
+            margin: $spaceWidth $spaceWidth 0;
+            .info-box{
+                height: 80px;
+                padding: 0;
+            
+                & > div{
+                    display: inline-block;
+                    width: calc(33% - 1px);
+                    height: 48px;
+                    text-align: center;
+                    margin-top: 16px;
+                    position: relative;
+
+                    &:after{
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        right: 0;
+                        top: 10px;
+                        bottom: 6px;
+                        width: 1px;
+                        background-color: rgba(81, 130, 228, 0.15);
+                    }
+
+                    &:last-child:after{
+                        display: none;
+                    }
+
+                    p{
+
+                        line-height: 24px;
+                    }
+                }
+            }
+        }
+        //群集详细信息
+        .detail{
+            position: absolute;
+            top: 122px;
+            left: $spaceWidth;
+            right: $spaceWidth;
+            bottom: 0;
+
+            .clusters{
+                width: calc(100% - 559px);
+                float: left;
+                height: 100%;
+                overflow: hidden;
+
+                th{
+                    text-align: center;
+                }
+                th:first-child{
+                    width: 150px;
+                }
+
+                //给个宽度
+                .freezed-table{
+                    width: 100%;
+                    height: calc(100% - 25px);
+
+                    //占满宽度
+                    .__table-body table{
+                        min-width: 100%;
+                    }
+                }
+            }
+            .visual{
+                width: 551px;
+                float: right;
+
+                .visual-inner{
+                    position: absolute;
+                    top: 25px;
+                    bottom: 0;
+
+                    .info-box{
+                        width: 551px;
+                        padding: 24px;
+                        height: 400px;
+                        max-height: 100%;
+                    }
+                }
+            }
+        }
+            
+    }
+
+
+    //使用机器模型
+    //宽高随容器伸缩，flex布局content占满高度
+    &.ml-add-field{
+        line-height: 32px;
+
+        .select-model{
+            padding-bottom: 17px;
+            margin-right: -24px;
+            padding-right: 24px;
+
+            border-bottom: 1px rgba(81,130,227,0.15) solid;
+
+            .select-wrap{
+                width: 70%;
+                float: right;
+                height: 32px;
+            }
+            //定制select-search-list行高
+            .search-list-box ul li,
+            .select-search-value{
+                height: 32px;
+                line-height: 32px;
+            }
+        }
+
+        //模型特征 对应列表
+        ul.features-map{
+            li{
+                width: 100%;
+                line-height: 32px;
+                //margin: 4px 0;  //工作表、图表 中间隔不同 放到ng-class中实现
+                padding-left: 6px;
+                position: relative;
+            }
+            label{
+                width: 35%;
+                float: left;
+                position: relative;
+
+                span.nowrap{
+                    display: inline-block;
+                    max-width: calc(100% - 22px);
+                    vertical-align: middle;
+
+                    //如果没有comments，字段名可以占满100%宽度
+                    &.max100{
+                        max-width: 100%;
+                    }
+                }
+                .bdp-tooltip{
+                    display: inline-block;
+                }
+            }
+            .drag-target-inner{
+                height: 38px;
+                padding-top: 4px;
+                /* Rectangle 2: */
+                box-shadow: inset 0px -1px 0px 0px rgba(81,130,227,0.15);
+
+                span.name{
+                    max-width: 127px;
+                }
+            }
+            select{
+                width: 60%;
+                float: right;
+                margin-top: 4px;
+            }
+        }
+    }
+
+    //模型大类选择
+    .mltype-selection{
+        margin-left: 1px;
+        float: left;
+
+        &:first-child{
+            margin-left: 0;
+        }
+
+        h2{
+            width: 250px;
+            height: 145px;
+            position: relative;
+            font-size: 16px;
+            font-weight: normal;
+            cursor: pointer;
+            z-index: 1;
+
+            .bdp-icon{
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                position: absolute;
+                top: 32px;
+                right: 105px;
+                opacity: 1;
+            }
+            span.text{
+                display: block;
+                width: 100%;
+                text-align: center;
+                position: absolute;
+                top: 88px;
+            }
+
+        }
+
+        .tips{
+            width: 100%;
+            position: absolute;
+            left: 0;
+            padding: 24px;
+            visibility: hidden;
+            //height: 247px;
+
+            .schematic{
+                position: relative;
+                width: 320px;
+                height: 181px;
+                float: right;
+
+                img{
+                    width: 100%;
+                }
+            }
+
+            .introduce{
+                width: 360px;
+                margin-bottom: 7px; //25px;
+                text-align: justify;
+
+                .title{
+                    font-weight: bold;
+                    margin-bottom: 6px;
+                }
+
+                .usecase{
+                    padding-left: 45px;
+                    position: relative;
+
+                    label{
+                        font-weight: bold;
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                    }
+                }
+            }
+
+            .link-to-guide{
+                position: absolute;
+                bottom: 24px;
+            }
+        }
+
+        &.-hover,
+        &:hover{
+            h2{
+                z-index: 1;
+            }
+            //icon文字布局变化 动画
+            //i.bdp-icon{
+            //    right: 84px;
+            //    top: 52px;
+            //}
+
+            span.text{
+                //width: initial;
+                //top: 60px;
+                //left: 32px;
+            }
+
+            //显示详细解释
+            .tips{
+                visibility: visible;
+            }
+        }
+    }
+
+    .view-header{
+        .btn{
+            padding: 0 20px;
+        }
+    }
+
+    // http://codepen.io/Hanna_Kim/pen/Xpbbvo
+    .text-wave-loading {
+        display: flex;
+        margin: 8px 0;
+
+        .__element {
+          font: normal 100 12px Roboto;
+          letter-spacing: 6px;
+          opacity:0.7;
+        }
+
+        [class*="el"] {
+          animation: bouncing 2.4s infinite ease;
+        }
+
+        @for $i from 1 through 9 {
+          $delay: percentage($i);
+          .el#{$i} {
+            animation-delay: $delay / 1000% + s;
+          }
+        }
+
+        @keyframes bouncing {
+          0%, 100% {
+            transform: scale3d(1,1,1);
+          }
+          50% {
+            transform: scale3d(0,0,1);
+          }
+        }
+    }
+
+}
+
+//表格组件样式
+.table-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    $tbHeaderHeight: 32px;
+    $columnCapHeight: 40px;
+
+    &.show-gutter{
+        .fixed-header{
+            //padding-top: 2px;  //为选中时的边框顶部预留的高度
+            li:nth-child(even){
+                padding-left: 0;  //清除普通表格模式下左侧间隔线
+            }
+        }
+        //按列展示的时候，限制一下最大列宽
+        //一般这种场景下主要关注数值和短字符串，太长的没有意义
+        td {
+            max-width: 120px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        td, th{
+            cursor: pointer;
+        }
+
+        .gutter {
+            background: transparent !important;
+            border: none;
+            padding: 4px;
+        }
+        .gutter.gutter-for-border {
+            padding: 1.5px;
+        }
+
+        td + td,
+        th + th {
+            border-left: none;
+        }
+
+    }
+
+    .scroll-wrap{
+        position: absolute;
+        left: 0;
+        top: -1px;
+        bottom: 0;
+        overflow: auto;
+        min-width: 100%;
+        width: 100%;
+        top: $tbHeaderHeight;
+    }
+
+    table {
+        width: 100%;
+        min-width: 100%;
+        margin-left: auto;
+        margin-right: auto; 
+    
+        margin-top: 0 - $tbHeaderHeight + 1px;
+
+        overflow: hidden;
+    }
+
+    //thead th {
+    //    background-color: #202236;
+    //    color: rgba(255, 255, 255, 0.7);
+    //}
+
+    //tr:nth-child(odd) td {
+    //    background-color: #313449;
+    //}
+
+    //tr:nth-child(even) td {
+    //    background-color: #2B2E44;
+    //}
+
+    //tr + tr td{
+    //    border-top: solid 1px #24273E;
+    //}
+
+    //td + td,
+    //th + th {
+    //    border-left: solid 1px #24273E;
+    //}
+
+    //td a {
+    //    color: white;
+    //}
+
+    
+    th, td {
+        white-space: nowrap;
+    }
+
+    td {
+        padding: 8px 18px;
+        line-height: 16px;
+        height: 32px;
+    }
+
+
+    th {
+        padding: 8px 32px;
+        line-height: 16px;
+        height: 32px;
+        text-align: left;
+    }
+
+    
+    .column-cap {
+        //display: none;
+        height: $columnCapHeight;
+        line-height: $columnCapHeight;
+        margin-bottom: 1px;
+    }
+
+    .column-head{
+        text-align: center;
+        height: 32px;
+        line-height: 32px;
+
+        .ico-default-sort-arrow{
+            visibility: hidden;
+        }
+
+        &:hover{
+            .ico-default-sort-arrow{
+                visibility: visible;
+            }
+        }
+    }
+    
+    //机器学习定制颜色
+    .fixed-header{
+
+        position: relative;
+        //z-index: 8;
+        //height: 32px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+
+        li .preview-field-type .bdp-icon {
+          opacity: 1;
+        }
+
+        li {
+          border-top: none;
+          position: relative;
+          white-space: nowrap;
+          //height: 32px;
+          //line-height: 32px;
+          padding-left: 1px;
+          overflow: hidden;
+        }
+        li:first-child {
+          padding-left: 0;
+        }
+
+        li:last-child {
+            border-right: none;
+        }
+    
+    }
+
+    /* hover效果 */
+    th, td {
+        position: relative;
+    }
+
+    .fixed-header .ignore-mask .ignore-tip{
+        display: block;
+        height: 100%;
+
+        &.-cap40{
+            height: 39px;
+        }
+    }
+    /* 忽略字段灰暗朦层 */
+    .fixed-header .ignore-mask,
+    th.ignore-mask:before
+    {
+        //background: rgba(36,39,62,0.85);
+        //border: 1px solid rgba(81,130,227,0.15);
+        position: absolute;  
+        width: 100%;
+        top: 0;
+        left: 0;
+        height: calc(100% + 2px);
+        text-align: center;
+        //padding-top: 12px;
+        line-height: 32px;
+    }
+
+    thead th.ignore-mask:before{
+        content: '';
+        height: 100000px;
+        z-index: 1;
+    }
+
+    /* 选中边框 */
+    .fixed-header {
+        li.hover{
+            box-shadow: 0px -2px 0px 2px #5182E4;
+        }
+        li.hover:after {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 100%;
+            top: 0;
+            box-shadow: 0px 0px 0px 2px #5182E4;
+        }
+        &.-no-data li.hover{
+            box-shadow: 0px -2px 0px 2px #5182E4, 0px 1px 0px 2px #5182E4;
+        }
+    }
+
+    thead th.hover:after{
+        content: '';  
+        position: absolute;  
+        top: -2px;
+        left: 0;
+        width: 100%;
+        height: 100000px;
+
+        z-index: -1;
+        box-shadow: 0px -2px 0px 2px #5182E4;
+    }
+
+    tbody td.hover:after{
+        content: '';  
+        position: absolute;  
+        left: 0;
+        bottom: -2px;
+        width: 100%;
+        z-index: 1;
+        box-shadow: 0px -2px 0px 2px #5182E4;
+    }
+
+}
+
+//固定表头&首列
+.freezed-table{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+
+    .__table-body{
+        overflow: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    .__fixed-column-wrap{
+        position: absolute;
+        top: 0;
+        bottom: 14px;   
+        z-index: 2;
+        overflow: hidden;
+        visibility: hidden;
+    }
+    .__fixed-column-body{
+        overflow-y: auto;
+        width: 200%;
+        height: 100%;
+    }
+    .__fixed-column-header{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 3;
+    }
+    .__fixed-header{
+        position: absolute;
+        top: 0;
+    }
+}
+
+//用机器模型创建字段弹层定制样式
+.ngdialog.ngdialog-theme-default.ml-apply-dialog{
+    padding: 0 24px;
+    .ngdialog-content{
+        max-height: 70%;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+    }
+    .ngdialog-message{
+        overflow-y: auto;
+        flex-grow: 1;
+    }
+}
+
+bdp-list{
+    display: block;
+}
+.menu-list{
+    li.menu-item {
+        line-height: 32px;
+        font-size: 13px;
+        cursor: pointer;
+        // overflow: hidden;
+        // white-space: nowrap;
+        // text-overflow: ellipsis;
+        padding-left: 24px;
+    }
+    li.menu-item.active,
+    li.menu-item.active:hover {
+        background-position: center bottom;
+        background-repeat: no-repeat;
+    }
+
+}
+
+/**
+ * 通用无边框按钮样式
+ * @example
+ * <div>
+ *   <a class="cube-btn">默认样式</a>
+ *   <a class="cube-btn btn-primary">强调样式</a>
+ * </div>
+ */
+.cube-btn{
+    display: inline-block;
+    padding: 0 25px;
+    line-height: 32px;
+    text-align: center;
+    cursor: pointer;
+    color: #5182E4;
+    font-weight: bold;
+    font-size: 14px;
+    //覆盖<button>元素默认样式
+    border: none;
+    background: none;
+
+    transition: all .2s ease-in-out;
+
+    //默认版hover有底色
+    &:hover{
+        background-color: rgba(81, 130, 228, 0.1); 
+    }
+    //灰色版
+    &.btn-gray{
+        color: rgba(255,255,255, .6);
+        background: rgba(163,171,167, .2);
+    }
+    //亮色版（强调）
+    &.btn-primary{
+        color: #FFFFFF;
+        background: #5182E4;
+    }
+}
+
+//hover时出右箭头的向导按钮
+.cube-btn.btn-wizard-arrow{
+    position: relative;
+    overflow: hidden;
+    padding: 0 24px;
+
+    span{
+        position: relative;
+        left: 0;
+        transition: all .2s ease-in-out;
+    }
+
+    .bdp-icon{
+        position: absolute;
+        right: -16px;
+        top: 8px;
+        transition: all .2s ease-in-out;
+    }
+
+    &:hover{
+        span{
+            left: -8px;
+        }
+        .bdp-icon{
+            right: 12px;
+        }
+    }
+}
+
+/**
+ * 用flex布局实现的垂直居中
+ * @example
+ * <div style="" class="vertical-center">
+ *    <div class="__before-center"></div>
+ *    <div>想要居中的内容</div>
+ *    <div class="__after-center"></div>
+ * </div>
+ */
+.vertical-center {
+    display: flex;
+    flex-direction: column;
+
+    .__before-center{
+        flex-grow: 1;
+    }
+    .__after-center{
+        flex-grow: 1;
+    }
+}
+
+.gpu-accelerated{
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+
+
+//一下是应该被分离出去的样式
+.ml-fields-hlist{
+    li{
+        background: $tableColumnHeadBGC;
+        color: $fontTextHover;
+    }
+}
+
+.folder-tree{
+    .table-name a:hover {
+        color: $fontDbListTableNameHover;
+    }
+    .table-name.active {
+        box-shadow: $shadowDbListTableNameActiveA;
+        background-color: $bgColorDbListTableNameActiveA;
+        color: $fontDbListTableNameHover;
+    }
+    .table-name.search-hover a{
+        color:$fontDsDbActive;
+    }
+}
+
+.welcome{
+    .cool-brain {
+        background-image: $mlWelcomeCoolBrain;
+    }
+    //首页 欢迎页
+    .entry{
+        h1{
+            color: $fontTextHover;
+        }
+
+        .start-btn{
+            border: 2px solid #5182E4;
+
+            &:hover{
+                background: #5182E4;
+                color: #FFF;
+            }
+        }
+    }
+}
+
+
+.setup-training,
+.machine-learning{
+    .bright-attention{
+        color: $fontTextActive2;
+    }
+    .bright-font{
+        color: $fontTextActive2;
+    }
+
+    .card{
+        background: $bgFuncTip;
+        box-shadow: $mlShadowBox;
+    }
+
+    //定制highcharts样式
+    .highcharts-tooltip{
+        span{
+            color: $fontText !important;
+        }
+    }
+    .highcharts-yaxis-grid .highcharts-grid-line{
+        opacity: $mlHightchartsGridOpacity;
+        stroke: $mlHightchartsGridStroke;
+    }
+    .highcharts-plot-lines-0{
+        opacity: 0.2;
+    }
+    .highcharts-axis-title{
+        color: $fontTextTip !important;
+        fill: $fontTextTip !important;
+    }
+
+    .formula-box{
+        background: $mlFormulaBoxBGC;
+        border: 1px solid $mlFormulaBoxBDC;
+
+        color: $fontTextActive2;
+
+        .__sign{
+            color: $fontText;
+        }
+        .__term{
+            color: $mlFormulaTermColor;
+        }
+    }
+
+    .ds-main{
+        //.right-content-wrap{
+        //    .holder-image{
+        //        display: inline-block;
+        //        width: 95px;
+        //        height: 80px;
+        //        background: url('../icons/ml/field_stats_blank.png') 0 0 no-repeat;
+        //    }
+        //}
+
+        /* T字形布局（带header) */
+        &.tshap {
+            .header{
+                background: $bgMain;
+                box-shadow: $mlTshapHeaderShadow;
+                .drag-target-inner{
+                    color: $fontTextTip;
+                }
+            }
+        }
+    }
+
+    .ds-main.model {
+        .content-wrap {
+            .model-detail {
+                .model-status{
+                    //background-color: $mlModelStatusBGC;
+                    border: $mlModelStatusBorder;
+                }
+                .fadeout {
+                    background-image: $mlVideoFadeoutShadow;
+
+                    position:absolute; 
+                    top: 0; 
+                    bottom: 0; 
+                    left:0; 
+                    right:0;
+                }
+            }
+        }
+    }
+
+    //决策树 - 混淆矩阵 ROC曲线
+    .decision-tree {
+        color: $fontTextHover;
+        .matrix-outer{
+
+            //不能透明，要重写一遍model-detail card的底色
+            .__fixed-column-wrap,
+            .__fixed-column-header{
+                background: $mlMatrixHeaderBGC;
+            }
+        }
+        legend{
+            color: $fontTextTip;
+        }
+
+        fieldset{
+            border-top: 1px solid $mlMatrixIdLineColor;
+        }
+        //纵向
+        fieldset.-y{
+            &:before,
+            &:after{
+                background: $mlMatrixIdLineColor;
+            }
+        }
+
+        td.diagonal{
+            background: $mlMatrixDiagonalColor;
+        }
+        td.unexpected{
+            background: $mlMatrixUnexpectedColor;
+        }
+        td,th{
+            border: 1px solid $mlMatrixCellBorderColor;  //设计图上边框是透明FFF实现的，但这里叠加的层太多，只能用固定的颜色
+            background: $mlMatrixNormalColor;
+        }
+        th{
+            background: $mlMatrixHeaderBGC; //rgba(255,255,255, 0.03);
+        }
+        td:first-child{
+            background: $mlMatrixFixedColumnBGC; //rgba(255,255,255, 0.06);
+        }
+    
+    }
+
+    .mltype-selection{
+        h2{
+            background: $mlSelectionBackground;
+            box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.12);
+        }
+
+        .tips{
+            background: $themeBg;
+
+            .introduce{
+                .usecase{
+
+                    label{
+                        color: $fontTextTip;
+                    }
+                }
+            }
+        }
+
+        &.-hover,
+        &:hover{
+            h2{
+                background: $mlSelectionBackgroundHover;
+                box-shadow: $mlSelectionShadowHover;
+            }
+            span.text{
+                color: $fontTextHover;
+            }
+        }
+    }
+
+    //表头帽子样式定义
+    .cap-inner{
+        color: rgba(255,255,255,0.70);
+
+        .label{
+            background: $mlTableCapLabelBGC;
+            color: #FFFFFF;
+        }
+        .feature{
+            background: $mlTableCapFeatureBGC; 
+            color: #FFFFFF;
+        }
+        .variance{
+            /* Rectangle 9: */
+            opacity: 0.49;
+            background: #5355B7;
+            box-shadow: inset 1px 0px 0px 0px #5355B7;
+        }
+    }
+
+    .drag-target-inner{
+        .tag{
+           //渐变切角：http://www.w3cplus.com/css3/css-secrets/cutout-corners.html
+           background: linear-gradient(-135deg, transparent 5px, #{$mlTableCapLabelBGC} 0); 
+        }
+     }
+
+     .center-card{
+         background: $bgMain;
+         box-shadow: $mlCenterCardShadow;
+     }
+
+     .filter-layer{
+         .tag{
+         //   background-color: $mlFilterTagBGC;
+         //   &:hover{
+              background-color: $bgFilterLayerTagHover;
+         //   }
+         }
+     
+         .tag:after{
+            border-top-color: $bgHtmlBody;
+            border-right-color:  $bgHtmlBody;
+            border-bottom-color:  $bgHtmlBody; 
+         }
+
+         &:before{
+            border-top: 1px solid $mlSplitLineColor;
+         }
+     }
+
+    //底部栏 背景颜色
+    .setup-training-footer{
+        background-color: $bgColViewHeader;
+        box-shadow: $mlShadowFooter;
+    }
+
+    .bdp-icon.ico-plus1.-white{
+        background: $mlIconPlus;
+    }
+    //icon变亮
+    .start-training-btn .bdp-icon,
+    .menu-item .bdp-icon,
+    .btn-layer .bdp-icon{
+        opacity: $opacitySpecialBdpIcon;
+    }
+
+    .btn-layer a:hover{
+        color: $fontTextActive2;
+    }
+
+    //定制空心蓝色
+    .bdp-btn.-blue-hollow{
+        background: transparent;
+        box-shadow: 0 0 0 1px rgba(81, 130, 228, 0.6) inset;
+    }
+    .bdp-btn.-blue-hollow:hover{
+        box-shadow: 0 0 0 1px rgba(81, 130, 228, 1) inset;
+    }
+
+}
+
+//表格组件样式
+.table-container {
+    color: $fontText;
+
+    thead th {
+        background-color: $tableHeaderBGC;
+        //color: $fontText;
+    }
+
+    tr:nth-child(odd) td {
+        background-color: $bgBdpTableNormalTrOdd;
+    }
+    tr:nth-child(even) td {
+        background-color: $bgBdpTableNormalTrEven;
+    }
+
+    tr + tr td{
+        border-top: solid 1px $borderrderBdpTableNormal;
+    }
+
+    td + td,
+    th + th {
+        border-left: solid 1px $borderrderBdpTableNormal;
+    }
+
+    td a{
+       color: $fontTextHover;
+    }
+    
+    .column-head{
+        background: $tableColumnHeadBGC;
+        color: $fontTextHover;
+    }
+
+    /* 忽略字段灰暗朦层 */
+    .fixed-header .ignore-mask,
+    th.ignore-mask:before
+    {
+        background: $tableColumnMaskBGC;
+        border: 1px solid rgba(81,130,227,0.15);
+    }
+    .fixed-header .ignore-tip{
+        background: $columnHeadIgnoreBGC;
+    }
+
+}
+
