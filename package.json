@@ -9,16 +9,19 @@
   "author": "deemstone@gmail.com",
   "license": "ISC",
   "devDependencies": {
-    "gulp": "^3.9.1",
     "gulp-postcss": "^6.3.0",
     "gulp-sourcemaps": "^2.4.1",
-    "gulp-watch": "^4.3.11",
-    "postcss-advanced-variables": "^1.2.2",
-    "postcss-scss": "^0.4.1",
-    "q": "^1.4.1"
+    "gulp-watch": "^4.3.11"
   },
   "dependencies": {
     "debug": "^2.6.1",
-    "postcss": "^5.2.15"
+    "gulp": "^3.9.1",
+    "gulp-util": "^3.0.8",
+    "postcss": "^5.2.15",
+    "postcss-advanced-variables": "^1.2.2",
+    "postcss-import": "^9.1.0",
+    "postcss-scss": "^0.4.1",
+    "q": "^1.4.1",
+    "through2": "^2.0.3"
   }
 }

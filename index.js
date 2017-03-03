@@ -26,7 +26,7 @@ var syntax = require('postcss-scss');
 var atImport = require("postcss-import")
 //var scssVariables = require('postcss-advanced-variables');
 
-var applySourceMap = require('vinyl-sourcemaps-apply')
+//var applySourceMap = require('vinyl-sourcemaps-apply')
 var through = require('through2');
 var gutil = require('gulp-util');
 
