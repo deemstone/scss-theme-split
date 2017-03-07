@@ -15,9 +15,9 @@
   },
   "dependencies": {
     "debug": "~2",
-    "gulp": "^3.9.1",
-    "gulp-util": "^3.0.8",
-    "postcss": "^5.2.15",
+    "gulp": "^3.9.x",
+    "gulp-util": "^3.0.x",
+    "postcss": "^5.2.x",
     "postcss-advanced-variables": "^1.2.2",
     "postcss-import": "^9.1.0",
     "postcss-scss": "^0.4.1",
